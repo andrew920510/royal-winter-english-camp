@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【宿霧親子共學】海外沉浸式英語營隊 - 常見問答手冊</title>
+    <!-- 引入 Font Awesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 整合後的 CSS 樣式區塊 -->
+    <style>
+        /* --- 1. 基本設定與字體 --- */
+        :root {
+            --primary-color: #38A1D8; /* 活潑的天藍色 (代表學習、天空) */
+            --secondary-color: #FF8C00; /* 亮橙色 (代表活力、陽光、強調) */
+            --accent-color: #4CAF50; /* 綠色 (代表安全、健康) */
+            --text-dark: #2c3e50; /* 深藍灰色，專業且易讀 */
+            --text-light: #ecf0f1;
+            --section-bg: #f4f7f9; /* 淺灰色/淺藍色背景 */
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* 稍微明顯的陰影 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: '微軟正黑體', 'Arial', sans-serif;
+            line-height: 1.7; /* 增加行高，更適合親子閱讀 */
+            color: var(--text-dark);
+            background-color: #fff;
+            scroll-behavior: smooth; /* 平滑捲動效果 */
+            font-size: 16px; /* 基礎字體稍大 */
+        }
+
+        .container {
+            width: 90%; /* 寬度稍微放寬 */
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        /* --- 2. 導覽列 (Navbar) --- */
+        .navbar {
+            background: #fff;
+            color: var(--text-dark);
+            padding: 12px 0;
+            border-bottom: 3px solid var(--primary-color); /* 底部邊線強調 */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo 容器樣式 */
+        .logo {
+            text-decoration: none;
+            display: flex; /* 啟用 Flexbox */
+            align-items: center; /* 垂直置中 */
+            height: 50px; /* 設置為 Logo 應有的高度 */
+        }
+
+        /* 標誌圖片樣式 (使用 img 標籤) */
+        .nav-logo {
+            height: 100%; /* 圖片高度佔滿 logo 容器 */
+            width: auto; /* 保持圖片比例 */
+            object-fit: contain; /* 確保圖片比例維持，不變形 */
+            margin-right: 15px; /* 與右側導覽連結保持距離 */
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--secondary-color);
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* 導覽列中的按鈕樣式 - 橙色突顯 */
+        .btn-nav {
+            /* 核心修改：放大文字並置中 */
+            background-color: var(--secondary-color);
+            color: white !important;
+            padding: 10px 20px; /* 增加內距，使按鈕更大 */
+            border-radius: 20px;
+            box-shadow: 0 4px var(--text-dark);
+            transition: all 0.2s;
+            /* 確保文字置中 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem; /* 放大字體 */
+            height: 40px; /* 確保按鈕高度一致 */
+            line-height: 1; /* 取消行高影響，讓 flex 置中更精確 */
+        }
+        .btn-nav:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px var(--text-dark);
+        }
+
+        /* 漢堡選單按鈕樣式 */
+        .hamburger-menu {
+            display: none; /* 預設在桌機上隱藏 */
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+
+        /* --- 3. 通用元件 (按鈕/標題) --- */
+        .section {
+            padding: 80px 0; /* 區塊間距更大，更舒服 */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        /* 活潑的標題裝飾 */
+        .section-title::after {
+            content: '🚀'; /* 小圖示增加活潑感 */
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+        }
+
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 30px; /* 超大圓角 */
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2a8bc9;
+            transform: translateY(-3px);
+            box-shadow: 0 9px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-large {
+            font-size: 1.3rem;
+            padding: 20px 50px;
+        }
+
+        /* --- 4. 首頁橫幅 (Hero Section) --- */
+        .hero-section {
+            /* 提示: Google Drive 連結已替換為較適合 CSS 背景圖片使用的直接連結格式 */
+            background-image: linear-gradient(rgba(56, 161, 216, 0.9)), url('https://www.google.com/imgres?q=%E7%9A%87%E5%AE%B6%E8%8F%81%E8%8B%B1%E7%BE%8E%E8%AA%9E&imgurl=https%3A%2F%2Froyalelite.com.tw%2Fassets%2Fimages%2Flogo%2Flogo.png&imgrefurl=https%3A%2F%2Froyalelite.com.tw%2F&docid=zmvSwUNbRTcbxM&tbnid=fzqmnUQE5MR4ZM&vet=12ahUKEwj3l-7GxbeQAxX8oa8BHaD3DagQM3oECBUQAA..i&w=792&h=209&hcb=2&ved=2ahUKEwj3l-7GxbeQAxX8oa8BHaD3DagQM3oECBUQAA');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+        }
+
+        /* --- 5. 營隊亮點 (Features) --- */
+        .features-section {
+            background-color: #fff; /* 保持白色，更清晰 */
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-card {
+            background: var(--section-bg);
+            padding: 40px 30px;
+            border-radius: 15px; /* 圓角增加親和力 */
+            box-shadow: var(--shadow);
+            border-bottom: 5px solid var(--secondary-color); /* 底部亮邊強調 */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02); /* 活潑的跳動效果 */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-large {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            font-size: 1.4rem;
+        }
+
+        /* --- 6. 課程介紹 (Curriculum) --- */
+        .curriculum-section {
+            background-color: var(--section-bg);
+        }
+
+        .curriculum-content {
+            display: grid;
+            /* 核心改動：強制在大螢幕下分為兩欄，每欄等寬 (2x2) */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 25px;
+            margin-bottom: 40px;
+            /* 讓內容在中央對齊 */
+            max-width: 900px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .curriculum-item {
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px; /* 圓角 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ddd;
+        }
+
+        .curriculum-item i {
+            color: var(--secondary-color); /* 橙色圖示，更突出 */
+            font-size: 1.6rem;
+            margin-right: 12px;
+        }
+
+        .curriculum-item h3 {
+            display: inline;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .parent-focus {
+            background-color: #fffae6; /* 淺黃色，強調家庭主題 */
+            color: var(--text-dark);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+            border: 2px dashed var(--secondary-color); /* 虛線邊框，活潑 */
+        }
+
+        .parent-focus h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        /* --- 7. 安全與後勤 (Safety & Logistics) --- */
+        .safety-section {
+            background-color: #fff;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .safety-item {
+            background: var(--section-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .safety-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .safety-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* --- 8. FAQ 常見問答樣式 (Accordion Implementation) --- */
+        .faq-section {
+            background-color: #fff;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #2a8bc9; /* 懸停效果 */
+        }
+
+        /* 答案區域，預設隱藏並使用 max-height 實現平滑展開 */
+        .faq-answer {
+            padding: 0 20px; 
+            max-height: 0; /* 初始隱藏 */
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            color: var(--text-dark);
+            /* 保持文字內容有底部間距 */
+        }
+        
+        /* 展開時的狀態 */
+        .faq-answer.active {
+            max-height: 500px; /* 足夠大的高度以確保內容完全展開 */
+            padding: 15px 20px; /* 展開後顯示內距 */
+        }
+        
+        /* 箭頭圖標的樣式與旋轉 */
+        .faq-question i {
+            font-size: 0.9rem;
+            margin-left: 10px;
+            transition: transform 0.4s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        /* FAQ 分類標題 */
+        .faq-category {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        /* --- 9. 報名資訊與倒數 (Registration & Countdown) --- */
+        .register-section {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding-bottom: 80px;
+        }
+
+        .register-section .section-title {
+            color: white;
+        }
+        .register-section .section-title::after {
+            content: '⏰';
+        }
+
+        .countdown-box {
+            background-color: #e74c3c;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px auto 50px auto;
+            max-width: 700px;
+            box-shadow: 0 8px 0 #c0392b;
+        }
+
+        .countdown-value {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0 10px;
+            color: #ffdd57; /* 醒目的黃色 */
+        }
+
+        .countdown-label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .register-info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .info-card {
+            flex: 1;
+            max-width: 450px;
+            padding: 35px;
+            border-radius: 10px;
+            text-align: left;
+            background: white;
+            color: var(--text-dark);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .contact-detail {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-detail i {
+            width: 25px;
+            color: var(--primary-color);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .offer-card {
+            background-color: #e8f9e8;
+            border: 3px solid var(--accent-color);
+        }
+
+        .offer-list li {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .offer-list i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .btn-cta {
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 1.5rem;
+            padding: 20px 60px;
+            box-shadow: 0 8px 0 #e67e22;
+        }
+
+        .btn-cta:hover {
+            background-color: #e67e22;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 0 #c0392b;
+        }
+
+        /* --- 10. 頁尾 (Footer) --- */
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 25px 0;
+            font-size: 1rem;
+        }
+
+
+        /* --- 11. 響應式設計 (Media Queries for Mobile) --- */
+        /* 漢堡選單的顯示/隱藏邏輯 */
+        @media (max-width: 768px) {
+            
+            /* RWD 文字優化：調整基礎字體大小 */
+            body {
+                font-size: 14px; 
+            }
+            
+            /* RWD 區塊優化：調整 Section 間距 */
+            .section {
+                padding: 40px 0; /* 縮小區塊間距 */
+            }
+
+            .navbar .container {
+                flex-direction: row; /* 保持 Logo 和漢堡按鈕橫向排列 */
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 5px; /* 增加頂部空間 */
+                padding-bottom: 5px;
+            }
+            
+            /* RWD 內容優化：首頁橫幅 */
+            .hero-section {
+                padding: 50px 0; /* 進一步縮小 Hero 區塊高度 */
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem; /* 進一步縮小 H1 */
+                margin-bottom: 10px;
+            }
+
+            .hero-section h2 {
+                font-size: 1.3rem; /* 進一步縮小 H2 */
+                margin-bottom: 20px;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 1.8rem; /* 縮小區塊標題 */
+                margin-bottom: 30px; /* 縮小間距 */
+            }
+            
+            /* RWD 內容優化：營隊亮點卡片 */
+            .feature-card {
+                padding: 25px 15px; /* 縮小卡片內距 */
+            }
+            
+            .icon-large {
+                font-size: 3rem; /* 縮小圖標 */
+                margin-bottom: 10px;
+            }
+
+            /* RWD 內容優化：按鈕字體 */
+            .btn-large {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+            
+            /* RWD 內容優化：導覽列按鈕 (確保在漢堡選單內文字適中) */
+            .btn-nav {
+                font-size: 1rem;
+                padding: 8px 18px; 
+            }
+
+            /* RWD 內容優化：FAQ & 其他 */
+            .faq-question {
+                font-size: 0.95rem; 
+            }
+            
+            .faq-category {
+                font-size: 1.4rem; 
+            }
+            
+            .countdown-value {
+                font-size: 2.2rem;
+            }
+            
+            /* 漢堡選單的顯示/隱藏邏輯 */
+            .hamburger-menu {
+                display: block; 
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                /* 由於 sticky navbar，不再需要絕對定位，讓它自然在流中 */
+                /* top: 75px; */ 
+                left: 0;
+                background-color: #fff;
+                border-top: 1px solid #eee;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                z-index: 999;
+                /* 確保在 mobile 上可以自然在下方展開 */
+                position: static; 
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #f4f4f4;
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .btn-nav {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+
+            .curriculum-content {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+
+            .register-info-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .info-card {
+                max-width: 90%;
+            }
+            
+            .btn-cta {
+                font-size: 1.3rem;
+                padding: 15px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo 圖片：替換為 Placehold.co URL -->
+            <a href="#hero" class="logo">
+                <img 
+                    src="https://placehold.co/180x50/38A1D8/ffffff?text=Royal+English+LOGO" 
+                    alt="皇家遊學營 Logo" 
+                    class="nav-logo"
+                    onerror="this.onerror=null; this.src='https://placehold.co/180x50/38A1D8/ffffff?text=LOGO+Error';"
+                >
+            </a>
+            
+            <!-- 漢堡選單按鈕 -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#features" onclick="closeMenu()">營隊亮點</a></li>
+                <li><a href="#curriculum" onclick="closeMenu()">課程優勢</a></li>
+                <li><a href="#safety" onclick="closeMenu()">安全保障</a></li>
+                <li><a href="#faq" onclick="closeMenu()">常見問答</a></li>
+                <li><a href="#register" class="btn btn-nav" onclick="closeMenu()">立即報名</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="container">
+            <h1>海外沉浸式<br>親子共學體驗</h1>
+            <h2>家長親身見證<br>孩子的蛻變旅程！</h2>
+            <p>2026 寒假梯次｜宿霧全英語環境 x 密集客製化課程</p>
+            <a href="#register" class="btn btn-primary btn-large">限時優惠，立即搶位！</a>
+        </div>
+    </header>
+
+    <section id="features" class="section features-section">
+        <div class="container">
+            <h2 class="section-title">選擇我們的三大理由<br>「親子共學營」？</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-rocket icon-large"></i>
+                    <h3>加速英語能力突破</h3>
+                    <p>全英語密集環境、每日 8 堂課（含 4 堂一對一客製化教學），讓孩子想不進步都很難。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake-angle icon-large"></i>
+                    <h3>難忘的家庭學習旅程</h3>
+                    <p>家長參與親子課程與互動任務，親眼見證孩子從開口到自信表達的學習成長。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt icon-large"></i>
+                    <h3>最高規格的安全照護</h3>
+                    <p>24 小時校內宿舍封閉式管理、專車接送、中籍領隊隨行，讓家長安心無憂。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="section curriculum-section">
+        <div class="container">
+            <h2 class="section-title">【課程優勢】密集 x 客製化<br>x 實踐生活</h2>
+            <div class="curriculum-content">
+                <div class="curriculum-item">
+                    <i class="fas fa-chalkboard-teacher icon-small"></i>
+                    <h3>高密度一對一教學</h3>
+                    <p>每日四堂 **1 對 1 課程**，根據孩子的英文程度與目標量身打造教學內容，效果顯著。</p>
+                </div>
+                <div class="curriculum-item">
+                    <i class="fas fa-feather-alt icon-small"></i>
+                    <h3>獨家加值特色課程</h3>
+                    <p>除了正規課程外，每日再加 2 堂皇家主題英語特色課，結合「美語 x 健康 x ⽣活」。</p>
+                </div>
+                <div class="curriculum-item">
+                    <i class="fas fa-globe-asia icon-small"></i>
+                    <h3>文化實踐與應用</h3>
+                    <p>每週安排浮潛、跳島等文化體驗與戶外英語任務，讓孩子在真實情境中「玩中學、用中記」。</p>
+                </div>
+                <div class="curriculum-item">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3>專業師資與成果保證</h3>
+                    <p>老師皆為持證教師，發音標準。結業頒發證書並提供學習成果報告，見證孩子進步軌跡。</p>
+                </div>
+            </div>
+            <div class="parent-focus">
+                <h3>💖 家長參與設計：<br>見證孩子改變的最佳時刻</h3>
+                <p>家長與孩子共同住宿、共進午晚餐，並參與親子互動任務。孩子上課時，家長可自由活動或選擇英文課程，是創造家庭學習旅程的絕佳機會！</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="safety" class="section safety-section">
+        <div class="container">
+            <h2 class="section-title">【全程安心】<br>最高規格的 安全與生活</h2>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <i class="fas fa-lock"></i>
+                    <h4>24H 校園封閉管理</h4>
+                    <p>住宿統一在校內，24小時警衛與監控，進出嚴格管制。</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-bus-alt"></i>
+                    <h4>全程專車接送與陪同</h4>
+                    <p>從機場到學校全程專車，活動時有中籍領隊與當地老師全程陪同。</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-notes-medical"></i>
+                    <h4>駐校護士與健康照護</h4>
+                    <p>學校配有護士與合作醫院，餐食提供中西合併及台式菜色，兼顧營養與口味。</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <h4>即時回饋與視訊關懷</h4>
+                    <p>LINE 群組每日更新照片、雲端相簿紀錄，並提供夜間視訊時間，克服孩子想家。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">【常見問答】<br>解開您的所有疑慮</h2>
+            <div class="intro-text" style="text-align: center; margin-bottom: 30px;">
+                <p>孩子的未來，從開口說英語開始。皇家菁英美語結合海外浸潤課程，帶孩子走進世界，學習自信、培養獨立。</p>
+            </div>
+            
+            <ul class="faq-list">
+                
+                <li class="faq-category">一、課程與學習相關</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q1：皇家 & IU親子遊學的核心特色？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：「美語 × 健康 × 生活」三合一，全英語口說課程結合日常運動與城市生活體驗。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q2： 與其他遊學團最大課程差異是什麼？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：皇家菁英美語親子遊學營除了 IU 正規課外，1/26 – 2/8 每日再多 2 堂皇家主題英語特色課，總學習量顯著增加。這些課程特別設計將台灣學生所學、所習慣的內容融入其中，讓孩子在熟悉的環境中學習英語，進一步提升學習效果和自信心。即使回到台灣後，孩子們仍能在課本中看到相關內容，持續鞏固所學。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q3：課程內容包含哪些？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：課程依程度分班，採「1對1英語教學」＋「小班互動課」並行，涵蓋聽、說、讀、寫四大能力。每日 8堂課，上午語言密集學習，下午活動任務式英語，讓孩子在生活中實踐英文。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q4：老師是外師嗎？教學品質如何？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：菲律賓老師皆具備 TESOL / TEFL 證照，受過兒童英語教學與口音訓練。皇家合作學校為宿霧當地高評價語言中心，確保每位教師發音標準、課堂互動性強。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q5：課程難度會不會太難或太簡單？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：到校時會先安排英文程度測驗，學校會依照聽、說、讀、寫各方面的程度安排適合教材，確保學習目標明確。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q6：每天上幾堂課？學習時數多嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：每天約8堂課，包含每日4堂1對1課程、4堂小組互動課或活動課，學習密度高、成效明顯。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q7：除了課堂學習，還有其他活動嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：除了課堂學習外，會安排文化與體驗活動，如海島探索、當地市集英語任務、手作課程等，讓孩子在「玩中學、用中記」，自然開口說英語。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q8：師資如何選、老師口音會不會影響？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：老師需持有 TESOL/TEFL 或菲律賓教育證書，入校前通過教學觀摩與口音測試（學校提供測試標準），課程以互動為主，若家長/學生反映不合適可申請更換老師（依校方流程）。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q9： 雨天或氣候不佳怎麼辦？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：調整為室內文化課、英語電影、角色扮演等備用方案。</div>
+                </li>
+
+                <li class="faq-category">二、住宿與生活</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q10：IU English Academy 校區位在哪裡？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：營隊位於菲律賓宿霧市中心 IU English Academy 校區，步行約 10 分鐘可達 Ayala Mall。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q11：住宿是學生宿舍還是飯店？幾人一間房？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：為確保學生安全，統一校內住宿舍，皆含冷氣、熱水、每日清潔與洗衣服務。冬令營為3人一間房，兩週升級為2人房，每人需補美金60元差額。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q12：宿舍與環境安全嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：宿舍採封閉式校園管理，24小時警衛與監控系統。僅有學生與工作人員可進出，安全性高。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q13：餐食如何？孩子吃得習慣嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：每日三餐均由校方廚房精心準備，餐食融合多國風味料理，採自助式形式，選擇豐富。同時也有台式菜色，貼近台灣孩子的口味，因此大多數學生都能輕鬆適應。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q14：特殊飲食需求可否安排？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：可提供蛋奶素、全素與過敏客製餐，報名時註明即可。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q15：手機使用規範？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：週一至週五夜間 21:00–22:00 開放，週末彈性使用。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q16：有醫護或保險安排嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：學校配有合作醫院與駐校護士，旅平險與海外醫療保險由家長依需求自行購買。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q17：住宿環境與設備如何？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：學生可選擇校內宿舍或合作飯店，皆有冷氣、熱水、獨立衛浴、房間清潔與洗衣服務。宿舍提供專屬生活老師協助孩子日常起居。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q18：孩子如果想家怎麼辦？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：隨團中籍老師與學校輔導老師會協助適應，並提供「夜間視訊時間」（例如每晚 20:00 給家長 5–10 分鐘視訊），同時鼓勵孩子寫「每日學習亮點」，老師會回傳給家長。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q19：遇到生病或受傷如何處理？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：學校有駐校護士與合作醫院，若需就醫會先電話通知家長並取得同意，緊急情況則依醫療需求先處理並於第一時間通報家長。所有費用與保險理賠流程會在報名合約中明列。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q20：菲律賓1-2 月天氣適合活動嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：非常適合！一月是菲律賓最舒服的「乾季」，天氣涼爽 約28°C，不太會下大雨，非常適合戶外和海邊活動。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q21：是否提供照片與影片？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：每日更新雲端相簿，提供紀錄相片或影片連結。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q22：孩子第一次出國，會害怕嗎？(學生單獨前往) <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：全程有中籍台灣隨團老師與學校生活老師照顧，每日安排聯絡時間，透過LINE群每日更新孩子照片與狀況，讓家長即時掌握。</div>
+                </li>
+
+                <li class="faq-category">三、交通與行前準備</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q23：從台灣怎麼到宿霧？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：從桃園直飛宿霧約2小時50分，全程由領隊帶隊，機場到學校專車接送。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q24：需要準備哪些物品？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：行李建議：護照、學習用品、防曬用品、個人藥品、泳衣、防蚊液與轉接頭等。出發前會提供詳細「行前手冊」。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q25：出發前會有說明會嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：會。皇家總部將於出發前舉辦行前說明會，詳細說明行程、行李、海關流程、保險內容及緊急聯絡方式。</div>
+                </li>
+                
+                <li class="faq-category">四、親子同行與安全</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q26：學生年齡有限制嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：我們的遊學團對孩子的年齡沒有硬性限制，主要是看孩子的獨立程度。若考量到低年級孩子（例如小學三年級以下）的適應狀況和生活協助需求，我們會建議由家長陪同參加，讓孩子在最安心的環境下學習與成長。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q27：家長一起去的安排是甚麼？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：「親子課程」，孩子上課時家長白天可自由活動或選擇家長英文課程。晚上與孩子共同住宿、共進午晚餐。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q28：孩子有特殊飲食或健康狀況可以告知嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：可以，報名時請註明，我們會提前與學校、廚房及住宿單位溝通安排。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q29：如何確保孩子的安全？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：每日固定點名、夜間門禁、交通全程專車接送。不論是上課還是校外活動，全程都由台灣領隊老師搭配當地老師共同陪同、分工照看，全程禁止孩子單獨行動。</div>
+                </li>
+
+                <li class="faq-category">五、效果與回饋</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q30：短期學習真的有幫助嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：宿霧遊學最大的優勢是「全英語環境＋密集課程」，能快速提升口說自信與聽力反應，讓孩子真正體會到英文的重要性，並練習「敢開口說」。此外，我們特別安排了皇家精英美語專屬課程，將孩子在台灣所學的內容無縫融入，幫助他們快速適應、增加自信，讓學習效果事半功倍！</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q31：結束後會有證書或成果嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：課程結束後學校會頒發結業證書並舉辦結業式，讓家長清楚了解孩子的進步。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q32：課程成效如何評估？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：到校會進行分級測驗，回國前有舉辦學習成果展示。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q33：學習成效？真的有效嗎？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：菲律賓的教學核心是一對一的客製化課程，老師會根據孩子的程度和需求量身打造內容，配合每天四堂一對一和四堂團體課的沈浸式密集學習，能讓孩子的口說自信與聽力反應快速爆發性提升。此外，我們也會將部分上課內容和主題建入 iRoyal 系統中，讓孩子回國後可以不斷複習，皇家菁英美語的老師們也會持續協助銜接。</div>
+                </li>
+                
+                <li class="faq-category">六、報名與聯絡方式 📞</li>
+                <li class="faq-item">
+                    <div class="faq-question">Q34：為何現在就該報名？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：本梯次名額僅親子30 組且含皇家加值課，額滿截止，請把握機會。</div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Q35：如何繳費？ <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A：11/28前繳交訂金30% (NT$25,500)，其餘尾款 NT$59,500 請於12/26前繳交，即完成報名手續。
+                        <br>匯款戶名: 富陽文化事業股份有限公司
+                        <br>銀行代號: 永豐銀行(807)
+                        <br>匯款帳號: 029-018-0011568-1
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="register" class="section register-section">
+        <div class="container">
+            <h2 class="section-title">2026 寒假梯次：限量名額倒數中！</h2>
+            
+            <div class="countdown-box">
+                <p>報名截止日：2025年 11月 26日</p>
+                <div class="countdown" id="countdown-timer">
+                    <span class="countdown-label">距離截止</span>
+                </div>
+            </div>
+
+            <div class="register-info-grid">
+                <div class="info-card">
+                    <h3>💎 費用總覽與優惠</h3>
+                    <p class="price">NT$85,000 / 人</p>
+                    <p class="includes">費用已含：簽證、機票、課程、住宿、餐食、交通、活動 T恤。</p>
+                    <hr style="margin: 15px 0; border-top: 1px dashed #ddd;">
+                    <ul class="offer-list">
+                        <li><i class="fas fa-check-circle"></i> 親子同行優惠：現折NT$8,000</li>
+                        <li><i class="fas fa-check-circle"></i> 或選擇：贈送學習機乙台</li>
+                    </ul>
+                    <p class="small-text">名額有限（限額親子 30 組），請盡早報名！</p>
+                </div>
+                <div class="info-card offer-card">
+                    <h3>📞 報名與聯絡資訊</h3>
+                    <p class="contact-detail"><i class="fas fa-calendar-alt"></i> 活動日期：2026/01/26（一）～02/08（日）</p>
+                    <p class="contact-detail"><i class="fas fa-times-circle"></i> 報名截止：2025/11/26</p>
+                    <p class="contact-detail"><i class="fas fa-user-friends"></i> 名額：限額 親子30 組</p>
+                    <p class="contact-detail"><i class="fas fa-phone-alt"></i> 洽詢專線：03-3268270</p>
+                    <p class="contact-detail"><i class="fab fa-line"></i> LINE 官方：@333vmqio</p>
+                    <p class="contact-detail" style="margin-top: 20px;"><i class="fas fa-dollar-sign"></i> 訂金繳費：11/28 前繳交 NT$25,500 (30%)</p>
+                </div>
+            </div>
+            
+            <a href="報名表單連結" target="_blank" class="btn btn-primary btn-cta">立即鎖定名額，進入報名表單</a>
+
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 皇家菁英美語 | 活動日期：2026/01/26 ~ 02/08</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript 程式碼：倒數計時器
+        // 截止日期：2025年 11月 26日 23:59:59 
+        const deadline = new Date("Nov 26, 2025 23:59:59").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = deadline - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            const formatTime = (t) => t < 10 ? "0" + t : t;
+
+            const countdownElement = document.getElementById("countdown-timer");
+
+            if (countdownElement) {
+                 countdownElement.innerHTML = 
+                    `<span class="countdown-value">${formatTime(days)}</span> 天 
+                    <span class="countdown-value">${formatTime(hours)}</span> 時 
+                    <span class="countdown-value">${formatTime(minutes)}</span> 分 
+                    <span class="countdown-value">${formatTime(seconds)}</span> 秒`;
+            } else {
+                 console.error("Countdown timer element not found.");
+            }
+            
+            if (distance < 0) {
+                clearInterval(x);
+                if (countdownElement) {
+                    countdownElement.innerHTML = "報名已截止！";
+                }
+            }
+        }, 1000);
+        
+        // JavaScript 程式碼：漢堡選單切換邏輯
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            // 確保選單在點擊後關閉，但只在行動裝置模式下生效
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+            }
+        }
+
+        // 監聽視窗大小變化，在桌面模式下隱藏彈出選單
+        window.addEventListener('resize', function() {
+            const navMenu = document.getElementById('nav-menu');
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // JavaScript 程式碼：FAQ手風琴切換邏輯 (新功能)
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                const answer = item.querySelector('.faq-answer');
+                const isCurrentlyActive = button.classList.contains('active');
+
+                // 關閉所有展開的項目
+                document.querySelectorAll('.faq-question.active').forEach(activeButton => {
+                    const activeItem = activeButton.closest('.faq-item');
+                    activeButton.classList.remove('active');
+                    activeItem.querySelector('.faq-answer').classList.remove('active');
+                });
+
+                // 如果點擊的不是當前已開啟的項目，則展開它
+                if (!isCurrentlyActive) {
+                    button.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
