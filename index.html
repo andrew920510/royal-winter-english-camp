@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【宿霧親子共學】海外沉浸式英語營隊 - 常見問答手冊</title>
-    <!-- 引入 Font Awesome 圖示庫 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- 整合後的 CSS 樣式區塊 -->
     <style>
         /* --- 1. 基本設定與字體 --- */
         :root {
@@ -111,7 +109,6 @@
 
         /* 導覽列中的按鈕樣式 - 橙色突顯 */
         .btn-nav {
-            /* 核心修改：放大文字並置中 */
             background-color: var(--secondary-color);
             color: white !important;
             padding: 10px 20px; /* 增加內距，使按鈕更大 */
@@ -196,8 +193,8 @@
 
         /* --- 4. 首頁橫幅 (Hero Section) --- */
         .hero-section {
-            /* 提示: Google Drive 連結已替換為較適合 CSS 背景圖片使用的直接連結格式 */
-            background-image: linear-gradient(rgba(56, 161, 216, 0.9)), url('https://www.google.com/imgres?q=%E7%9A%87%E5%AE%B6%E8%8F%81%E8%8B%B1%E7%BE%8E%E8%AA%9E&imgurl=https%3A%2F%2Froyalelite.com.tw%2Fassets%2Fimages%2Flogo%2Flogo.png&imgrefurl=https%3A%2F%2Froyalelite.com.tw%2F&docid=zmvSwUNbRTcbxM&tbnid=fzqmnUQE5MR4ZM&vet=12ahUKEwj3l-7GxbeQAxX8oa8BHaD3DagQM3oECBUQAA..i&w=792&h=209&hcb=2&ved=2ahUKEwj3l-7GxbeQAxX8oa8BHaD3DagQM3oECBUQAA');
+            /* 提示: 請在同資料夾放入 hero-bg.jpg 圖片，或替換為你的圖片路徑 */
+            background-image: linear-gradient(rgba(56, 161, 216, 0.7), rgba(56, 161, 216, 0.7)), url('hero-bg.jpg'); 
             background-size: cover;
             background-position: center;
             color: white;
@@ -346,7 +343,7 @@
             font-size: 1.2rem;
         }
 
-        /* --- 8. FAQ 常見問答樣式 (Accordion Implementation) --- */
+        /* --- 8. FAQ 常見問答樣式 --- */
         .faq-section {
             background-color: #fff;
         }
@@ -377,42 +374,21 @@
             justify-content: space-between;
             align-items: center;
             font-size: 1.1rem;
-            transition: background-color 0.3s;
         }
         
-        .faq-question:hover {
-            background-color: #2a8bc9; /* 懸停效果 */
-        }
-
-        /* 答案區域，預設隱藏並使用 max-height 實現平滑展開 */
-        .faq-answer {
-            padding: 0 20px; 
-            max-height: 0; /* 初始隱藏 */
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-            background-color: #fff;
-            border-top: 1px solid #eee;
-            color: var(--text-dark);
-            /* 保持文字內容有底部間距 */
-        }
-        
-        /* 展開時的狀態 */
-        .faq-answer.active {
-            max-height: 500px; /* 足夠大的高度以確保內容完全展開 */
-            padding: 15px 20px; /* 展開後顯示內距 */
-        }
-        
-        /* 箭頭圖標的樣式與旋轉 */
         .faq-question i {
             font-size: 0.9rem;
             margin-left: 10px;
-            transition: transform 0.4s;
-        }
-        
-        .faq-question.active i {
-            transform: rotate(180deg);
         }
 
+        .faq-answer {
+            padding: 15px 20px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            color: var(--text-dark);
+            /* 模擬手風琴效果，預設展開以節省 JS */
+        }
+        
         /* FAQ 分類標題 */
         .faq-category {
             font-size: 1.8rem;
@@ -452,7 +428,7 @@
             font-size: 3rem;
             font-weight: 900;
             margin: 0 10px;
-            color: #ffdd57; /* 醒目的黃色 */
+            color: var(--secondary-color);
         }
 
         .countdown-label {
@@ -545,7 +521,6 @@
 
 
         /* --- 11. 響應式設計 (Media Queries for Mobile) --- */
-        /* 漢堡選單的顯示/隱藏邏輯 */
         @media (max-width: 768px) {
             
             /* RWD 文字優化：調整基礎字體大小 */
@@ -568,16 +543,16 @@
             
             /* RWD 內容優化：首頁橫幅 */
             .hero-section {
-                padding: 50px 0; /* 進一步縮小 Hero 區塊高度 */
+                padding: 80px 0; /* 維持適當高度 */
             }
 
             .hero-section h1 {
-                font-size: 2.2rem; /* 進一步縮小 H1 */
+                font-size: 2.5rem; /* 確保主標題可讀 */
                 margin-bottom: 10px;
             }
 
             .hero-section h2 {
-                font-size: 1.3rem; /* 進一步縮小 H2 */
+                font-size: 1.5rem; /* 確保副標題可讀 */
                 margin-bottom: 20px;
             }
 
@@ -587,7 +562,7 @@
             }
 
             .section-title {
-                font-size: 1.8rem; /* 縮小區塊標題 */
+                font-size: 2rem; /* 縮小區塊標題 */
                 margin-bottom: 30px; /* 縮小間距 */
             }
             
@@ -615,15 +590,15 @@
 
             /* RWD 內容優化：FAQ & 其他 */
             .faq-question {
-                font-size: 0.95rem; 
+                font-size: 1.0rem; 
             }
             
             .faq-category {
-                font-size: 1.4rem; 
+                font-size: 1.5rem; 
             }
             
             .countdown-value {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             /* 漢堡選單的顯示/隱藏邏輯 */
@@ -635,16 +610,13 @@
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                /* 由於 sticky navbar，不再需要絕對定位，讓它自然在流中 */
-                /* top: 75px; */ 
+                top: 75px; 
                 left: 0;
                 background-color: #fff;
                 border-top: 1px solid #eee;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 padding: 10px 0;
                 z-index: 999;
-                /* 確保在 mobile 上可以自然在下方展開 */
-                position: static; 
             }
             
             .nav-links.active {
@@ -693,17 +665,13 @@
 
     <nav class="navbar">
         <div class="container">
-            <!-- Logo 圖片：替換為 Placehold.co URL -->
             <a href="#hero" class="logo">
                 <img 
-                    src="https://placehold.co/180x50/38A1D8/ffffff?text=Royal+English+LOGO" 
+                    src="data:image/png;base64,YOUR_BASE64_STRING_HERE" 
                     alt="皇家遊學營 Logo" 
-                    class="nav-logo"
-                    onerror="this.onerror=null; this.src='https://placehold.co/180x50/38A1D8/ffffff?text=LOGO+Error';"
-                >
+                    class="nav-logo">
             </a>
             
-            <!-- 漢堡選單按鈕 -->
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -720,8 +688,8 @@
 
     <header id="hero" class="hero-section">
         <div class="container">
-            <h1>海外沉浸式<br>親子共學體驗</h1>
-            <h2>家長親身見證<br>孩子的蛻變旅程！</h2>
+            <h1>海外沉浸式 親子共學體驗</h1>
+            <h2>家長親身見證，孩子英語突飛猛進的蛻變旅程！</h2>
             <p>2026 寒假梯次｜宿霧全英語環境 x 密集客製化課程</p>
             <a href="#register" class="btn btn-primary btn-large">限時優惠，立即搶位！</a>
         </div>
@@ -729,7 +697,7 @@
 
     <section id="features" class="section features-section">
         <div class="container">
-            <h2 class="section-title">選擇我們的三大理由<br>「親子共學營」？</h2>
+            <h2 class="section-title">為什麼選擇我們的 「親子共學營」？</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class="fas fa-rocket icon-large"></i>
@@ -752,7 +720,7 @@
 
     <section id="curriculum" class="section curriculum-section">
         <div class="container">
-            <h2 class="section-title">【課程優勢】密集 x 客製化<br>x 實踐生活</h2>
+            <h2 class="section-title">【課程優勢】密集 x 客製化 x 實踐生活</h2>
             <div class="curriculum-content">
                 <div class="curriculum-item">
                     <i class="fas fa-chalkboard-teacher icon-small"></i>
@@ -776,7 +744,7 @@
                 </div>
             </div>
             <div class="parent-focus">
-                <h3>💖 家長參與設計：<br>見證孩子改變的最佳時刻</h3>
+                <h3>💖 家長參與設計： 見證孩子改變的最佳時刻</h3>
                 <p>家長與孩子共同住宿、共進午晚餐，並參與親子互動任務。孩子上課時，家長可自由活動或選擇英文課程，是創造家庭學習旅程的絕佳機會！</p>
             </div>
         </div>
@@ -784,7 +752,7 @@
 
     <section id="safety" class="section safety-section">
         <div class="container">
-            <h2 class="section-title">【全程安心】<br>最高規格的 安全與生活</h2>
+            <h2 class="section-title">【全程安心】 最高規格的 安全與生活</h2>
             <div class="safety-grid">
                 <div class="safety-item">
                     <i class="fas fa-lock"></i>
@@ -812,7 +780,7 @@
     
     <section id="faq" class="section faq-section">
         <div class="container">
-            <h2 class="section-title">【常見問答】<br>解開您的所有疑慮</h2>
+            <h2 class="section-title">【常見問答】 解開您的所有疑慮</h2>
             <div class="intro-text" style="text-align: center; margin-bottom: 30px;">
                 <p>孩子的未來，從開口說英語開始。皇家菁英美語結合海外浸潤課程，帶孩子走進世界，學習自信、培養獨立。</p>
             </div>
@@ -1039,23 +1007,15 @@
             
             const formatTime = (t) => t < 10 ? "0" + t : t;
 
-            const countdownElement = document.getElementById("countdown-timer");
-
-            if (countdownElement) {
-                 countdownElement.innerHTML = 
-                    `<span class="countdown-value">${formatTime(days)}</span> 天 
-                    <span class="countdown-value">${formatTime(hours)}</span> 時 
-                    <span class="countdown-value">${formatTime(minutes)}</span> 分 
-                    <span class="countdown-value">${formatTime(seconds)}</span> 秒`;
-            } else {
-                 console.error("Countdown timer element not found.");
-            }
+            document.getElementById("countdown-timer").innerHTML = 
+                `<span class="countdown-value">${formatTime(days)}</span> 天 
+                <span class="countdown-value">${formatTime(hours)}</span> 時 
+                <span class="countdown-value">${formatTime(minutes)}</span> 分 
+                <span class="countdown-value">${formatTime(seconds)}</span> 秒`;
             
             if (distance < 0) {
                 clearInterval(x);
-                if (countdownElement) {
-                    countdownElement.innerHTML = "報名已截止！";
-                }
+                document.getElementById("countdown-timer").innerHTML = "報名已截止！";
             }
         }, 1000);
         
@@ -1073,34 +1033,13 @@
             }
         }
 
-        // 監聽視窗大小變化，在桌面模式下隱藏彈出選單
+        // 監聽所有導覽連結，點擊後關閉選單（已在 HTML 中加入 onclick="closeMenu()"）
+        // 確保視窗大小變化時，選單狀態重置
         window.addEventListener('resize', function() {
             const navMenu = document.getElementById('nav-menu');
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');
             }
-        });
-
-        // JavaScript 程式碼：FAQ手風琴切換邏輯 (新功能)
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.closest('.faq-item');
-                const answer = item.querySelector('.faq-answer');
-                const isCurrentlyActive = button.classList.contains('active');
-
-                // 關閉所有展開的項目
-                document.querySelectorAll('.faq-question.active').forEach(activeButton => {
-                    const activeItem = activeButton.closest('.faq-item');
-                    activeButton.classList.remove('active');
-                    activeItem.querySelector('.faq-answer').classList.remove('active');
-                });
-
-                // 如果點擊的不是當前已開啟的項目，則展開它
-                if (!isCurrentlyActive) {
-                    button.classList.add('active');
-                    answer.classList.add('active');
-                }
-            });
         });
     </script>
 
