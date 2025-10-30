@@ -3,656 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【【2026宿霧親子共學營】| 皇家菁英美語</title>
+    <title>【宿霧親子共學】海外沉浸式英語營隊 - 常見問答手冊</title>
+    <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <style>
-        /* --- 1. 基本設定與字體 --- */
-        :root {
-            --primary-color: #38A1D8; /* 活潑的天藍色 (代表學習、天空) */
-            --secondary-color: #FF8C00; /* 亮橙色 (代表活力、陽光、強調) */
-            --accent-color: #4CAF50; /* 綠色 (代表安全、健康) */
-            --text-dark: #2c3e50; /* 深藍灰色，專業且易讀 */
-            --text-light: #ecf0f1;
-            --section-bg: #f4f7f9; /* 淺灰色/淺藍色背景 */
-            --shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* 稍微明顯的陰影 */
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: '微軟正黑體', 'Arial', sans-serif;
-            line-height: 1.7; /* 增加行高，更適合親子閱讀 */
-            color: var(--text-dark);
-            background-color: #fff;
-            scroll-behavior: smooth; /* 平滑捲動效果 */
-            font-size: 16px; /* 基礎字體稍大 */
-        }
-
-        .container {
-            width: 90%; /* 寬度稍微放寬 */
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 15px;
-        }
-
-        /* --- 2. 導覽列 (Navbar) --- */
-        .navbar {
-            background: #fff;
-            color: var(--text-dark);
-            padding: 12px 0;
-            border-bottom: 3px solid var(--primary-color); /* 底部邊線強調 */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Logo 容器樣式 */
-        .logo {
-            text-decoration: none;
-            display: flex; /* 啟用 Flexbox */
-            align-items: center; /* 垂直置中 */
-            height: 50px; /* 設置為 Logo 應有的高度 */
-        }
-
-        /* 標誌圖片樣式 (使用 img 標籤) */
-        .nav-logo {
-            height: 100%; /* 圖片高度佔滿 logo 容器 */
-            width: auto; /* 保持圖片比例 */
-            object-fit: contain; /* 確保圖片比例維持，不變形 */
-            margin-right: 15px; /* 與右側導覽連結保持距離 */
-        }
-        
-        .nav-links {
-            list-style: none;
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-            position: relative;
-            padding-bottom: 5px;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background: var(--secondary-color);
-            left: 0;
-            bottom: 0;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-
-        /* 導覽列中的按鈕樣式 - 橙色突顯 */
-        .btn-nav {
-            background-color: var(--secondary-color);
-            color: white !important;
-            padding: 10px 20px; /* 增加內距，使按鈕更大 */
-            border-radius: 20px;
-            box-shadow: 0 4px var(--text-dark);
-            transition: all 0.2s;
-            /* 確保文字置中 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem; /* 放大字體 */
-            height: 40px; /* 確保按鈕高度一致 */
-            line-height: 1; /* 取消行高影響，讓 flex 置中更精確 */
-        }
-        .btn-nav:hover {
-            background-color: #e67e22;
-            transform: translateY(-2px);
-            box-shadow: 0 6px var(--text-dark);
-        }
-
-        /* 漢堡選單按鈕樣式 */
-        .hamburger-menu {
-            display: none; /* 預設在桌機上隱藏 */
-            cursor: pointer;
-            font-size: 24px;
-            color: var(--primary-color);
-        }
-
-
-        /* --- 3. 通用元件 (按鈕/標題) --- */
-        .section {
-            padding: 80px 0; /* 區塊間距更大，更舒服 */
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 50px;
-            color: var(--text-dark);
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        }
-
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            border-radius: 30px; /* 超大圓角 */
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #2a8bc9;
-            transform: translateY(-3px);
-            box-shadow: 0 9px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-large {
-            font-size: 1.3rem;
-            padding: 20px 50px;
-        }
-
-        /* --- 4. 首頁橫幅 (Hero Section) --- */
-        .hero-section {
-            /* 提示: 請在同資料夾放入 hero-bg.jpg 圖片，或替換為你的圖片路徑 */
-            background-image: linear-gradient(rgba(56, 161, 216, 0.7), rgba(56, 161, 216, 0.7)), url('hero-bg.jpg'); 
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 120px 0;
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            margin-bottom: 15px;
-            font-weight: 900;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: var(--secondary-color);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-section p {
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-        }
-
-        /* --- 5. 營隊亮點 (Features) --- */
-        .features-section {
-            background-color: #fff; /* 保持白色，更清晰 */
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .feature-card {
-            background: var(--section-bg);
-            padding: 40px 30px;
-            border-radius: 15px; /* 圓角增加親和力 */
-            box-shadow: var(--shadow);
-            border-bottom: 5px solid var(--secondary-color); /* 底部亮邊強調 */
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px) scale(1.02); /* 活潑的跳動效果 */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .icon-large {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 15px;
-            color: var(--text-dark);
-            font-size: 1.4rem;
-        }
-
-        /* --- 6. 課程介紹 (Curriculum) --- */
-        .curriculum-section {
-            background-color: var(--section-bg);
-        }
-
-        .curriculum-content {
-            display: grid;
-            /* 核心改動：強制在大螢幕下分為兩欄，每欄等寬 (2x2) */
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 25px;
-            margin-bottom: 40px;
-            /* 讓內容在中央對齊 */
-            max-width: 900px; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .curriculum-item {
-            padding: 25px;
-            background-color: white;
-            border-radius: 10px; /* 圓角 */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            border: 1px solid #ddd;
-        }
-
-        .curriculum-item i {
-            color: var(--secondary-color); /* 橙色圖示，更突出 */
-            font-size: 1.6rem;
-            margin-right: 12px;
-        }
-
-        .curriculum-item h3 {
-            display: inline;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-        }
-
-        .parent-focus {
-            background-color: #fffae6; /* 淺黃色，強調家庭主題 */
-            color: var(--text-dark);
-            padding: 35px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 40px;
-            border: 2px dashed var(--secondary-color); /* 虛線邊框，活潑 */
-        }
-
-        .parent-focus h3 {
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-        }
-
-        /* --- 7. 安全與後勤 (Safety & Logistics) --- */
-        .safety-section {
-            background-color: #fff;
-        }
-
-        .safety-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .safety-item {
-            background: var(--section-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border-bottom: 4px solid var(--accent-color);
-        }
-
-        .safety-item i {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .safety-item h4 {
-            color: var(--text-dark);
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
-        /* --- 8. FAQ 常見問答樣式 --- */
-        .faq-section {
-            background-color: #fff;
-        }
-
-        .faq-list {
-            max-width: 900px;
-            margin: 0 auto;
-            list-style: none;
-            padding: 0;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .faq-question {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 20px;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.1rem;
-        }
-        
-        .faq-question i {
-            font-size: 0.9rem;
-            margin-left: 10px;
-        }
-
-        .faq-answer {
-            padding: 15px 20px;
-            background-color: #fff;
-            border-top: 1px solid #eee;
-            color: var(--text-dark);
-            /* 模擬手風琴效果，預設展開以節省 JS */
-        }
-        
-        /* FAQ 分類標題 */
-        .faq-category {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 5px solid var(--secondary-color);
-        }
-
-        /* --- 9. 報名資訊與倒數 (Registration & Countdown) --- */
-        .register-section {
-            text-align: center;
-            background-color: var(--primary-color);
-            color: white;
-            padding-bottom: 80px;
-        }
-
-        .register-section .section-title {
-            color: white;
-        }
-        .register-section .section-title::after {
-            content: '⏰';
-        }
-
-        .countdown-box {
-            background-color: #e74c3c;
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px auto 50px auto;
-            max-width: 700px;
-            box-shadow: 0 8px 0 #c0392b;
-        }
-
-        .countdown-value {
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 0 10px;
-            color: var(--secondary-color);
-        }
-
-        .countdown-label {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .register-info-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-
-        .info-card {
-            flex: 1;
-            max-width: 450px;
-            padding: 35px;
-            border-radius: 10px;
-            text-align: left;
-            background: white;
-            color: var(--text-dark);
-            box-shadow: var(--shadow);
-        }
-
-        .info-card h3 {
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-        }
-        
-        .contact-detail {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .contact-detail i {
-            width: 25px;
-            color: var(--primary-color);
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #e74c3c;
-            margin-bottom: 10px;
-        }
-
-        .offer-card {
-            background-color: #e8f9e8;
-            border: 3px solid var(--accent-color);
-        }
-
-        .offer-list li {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .offer-list i {
-            color: var(--accent-color);
-            margin-right: 10px;
-        }
-
-        .btn-cta {
-            background-color: var(--secondary-color);
-            color: white;
-            font-size: 1.5rem;
-            padding: 20px 60px;
-            box-shadow: 0 8px 0 #e67e22;
-        }
-
-        .btn-cta:hover {
-            background-color: #e67e22;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 0 #c0392b;
-        }
-
-        /* --- 10. 頁尾 (Footer) --- */
-        .footer {
-            background-color: var(--text-dark);
-            color: var(--text-light);
-            text-align: center;
-            padding: 25px 0;
-            font-size: 1rem;
-        }
-
-
-        /* --- 11. 響應式設計 (Media Queries for Mobile) --- */
-        @media (max-width: 768px) {
-            
-            /* RWD 文字優化：調整基礎字體大小 */
-            body {
-                font-size: 14px; 
-            }
-            
-            /* RWD 區塊優化：調整 Section 間距 */
-            .section {
-                padding: 40px 0; /* 縮小區塊間距 */
-            }
-
-            .navbar .container {
-                flex-direction: row; /* 保持 Logo 和漢堡按鈕橫向排列 */
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 5px; /* 增加頂部空間 */
-                padding-bottom: 5px;
-            }
-            
-            /* RWD 內容優化：首頁橫幅 */
-            .hero-section {
-                padding: 80px 0; /* 維持適當高度 */
-            }
-
-            .hero-section h1 {
-                font-size: 2.5rem; /* 確保主標題可讀 */
-                margin-bottom: 10px;
-            }
-
-            .hero-section h2 {
-                font-size: 1.5rem; /* 確保副標題可讀 */
-                margin-bottom: 20px;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-                margin-bottom: 30px;
-            }
-
-            .section-title {
-                font-size: 2rem; /* 縮小區塊標題 */
-                margin-bottom: 30px; /* 縮小間距 */
-            }
-            
-            /* RWD 內容優化：營隊亮點卡片 */
-            .feature-card {
-                padding: 25px 15px; /* 縮小卡片內距 */
-            }
-            
-            .icon-large {
-                font-size: 3rem; /* 縮小圖標 */
-                margin-bottom: 10px;
-            }
-
-            /* RWD 內容優化：按鈕字體 */
-            .btn-large {
-                padding: 10px 25px;
-                font-size: 1rem;
-            }
-            
-            /* RWD 內容優化：導覽列按鈕 (確保在漢堡選單內文字適中) */
-            .btn-nav {
-                font-size: 1rem;
-                padding: 8px 18px; 
-            }
-
-            /* RWD 內容優化：FAQ & 其他 */
-            .faq-question {
-                font-size: 1.0rem; 
-            }
-            
-            .faq-category {
-                font-size: 1.5rem; 
-            }
-            
-            .countdown-value {
-                font-size: 2.5rem;
-            }
-            
-            /* 漢堡選單的顯示/隱藏邏輯 */
-            .hamburger-menu {
-                display: block; 
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                top: 75px; 
-                left: 0;
-                background-color: #fff;
-                border-top: 1px solid #eee;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                padding: 10px 0;
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                margin: 0;
-                text-align: center;
-                padding: 10px 0;
-                border-bottom: 1px solid #f4f4f4;
-            }
-            
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
-            
-            .btn-nav {
-                display: block;
-                margin: 10px auto;
-                width: 80%;
-            }
-
-            .curriculum-content {
-                grid-template-columns: 1fr;
-                max-width: 100%;
-            }
-
-            .register-info-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .info-card {
-                max-width: 90%;
-            }
-            
-            .btn-cta {
-                font-size: 1.3rem;
-                padding: 15px 40px;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -662,8 +16,7 @@
                 <img 
                     src="logo.png" 
                     alt="皇家遊學營 Logo" 
-                    class="nav-logo"
->
+                    class="nav-logo">
             </a>
             
             <div class="hamburger-menu" onclick="toggleMenu()">
@@ -687,6 +40,12 @@
             <p>2026 寒假梯次｜宿霧全英語環境 x 密集客製化課程</p>
             <a href="#register" class="btn btn-primary btn-large">限時優惠，立即搶位！</a>
         </div>
+        
+        <img 
+            src="飛機.png" 
+            alt="搭飛機" 
+            class="hero-decoration-img">
+            
     </header>
 
     <section id="features" class="section features-section">
@@ -710,33 +69,46 @@
                 </div>
             </div>
         </div>
+        <img 
+            src="親子共學.png" 
+            alt="親子共學" 
+            class="section features-section-img">
     </section>
 
     <section id="curriculum" class="section curriculum-section">
         <div class="container">
             <h2 class="section-title">【課程優勢】密集 x 客製化 x 實踐生活</h2>
             <div class="curriculum-content">
-                <div class="curriculum-item">
+    
+                <div class="curriculum-item modal-trigger" data-modal-id="modal-1">
                     <i class="fas fa-chalkboard-teacher icon-small"></i>
                     <h3>高密度一對一教學</h3>
-                    <p>每日四堂 **1 對 1 課程**，根據孩子的英文程度與目標量身打造教學內容，效果顯著。</p>
+                    <p>每日四堂 1 對 1 課程，根據孩子的英文程度與目標量身打造教學內容，效果顯著。</p>
+                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
                 </div>
-                <div class="curriculum-item">
+                
+                <div class="curriculum-item modal-trigger" data-modal-id="modal-2">
                     <i class="fas fa-feather-alt icon-small"></i>
                     <h3>獨家加值特色課程</h3>
                     <p>除了正規課程外，每日再加 2 堂皇家主題英語特色課，結合「美語 x 健康 x ⽣活」。</p>
+                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
                 </div>
-                <div class="curriculum-item">
+                
+                <div class="curriculum-item modal-trigger" data-modal-id="modal-3">
                     <i class="fas fa-globe-asia icon-small"></i>
                     <h3>文化實踐與應用</h3>
-                    <p>每週安排浮潛、跳島等文化體驗與戶外英語任務，讓孩子在真實情境中「玩中學、用中記」。</p>
+                    <p>安排跳島、國際志工等文化體驗與戶外英語任務，讓孩子在真實情境中「玩中學、用中記」。</p>
+                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
                 </div>
-                <div class="curriculum-item">
+                
+                <div class="curriculum-item modal-trigger" data-modal-id="modal-4">
                     <i class="fas fa-award icon-small"></i>
                     <h3>專業師資與成果保證</h3>
                     <p>老師皆為持證教師，發音標準。結業頒發證書並提供學習成果報告，見證孩子進步軌跡。</p>
+                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
                 </div>
             </div>
+            
             <div class="parent-focus">
                 <h3>💖 家長參與設計： 見證孩子改變的最佳時刻</h3>
                 <p>家長與孩子共同住宿、共進午晚餐，並參與親子互動任務。孩子上課時，家長可自由活動或選擇英文課程，是創造家庭學習旅程的絕佳機會！</p>
@@ -958,8 +330,8 @@
                     <p class="includes">費用已含：簽證、機票、課程、住宿、餐食、交通、活動 T恤。</p>
                     <hr style="margin: 15px 0; border-top: 1px dashed #ddd;">
                     <ul class="offer-list">
-                        <li><i class="fas fa-check-circle"></i> 贈送學習機乙台<br>（市價：15000元/台)</li>
                         <li><i class="fas fa-check-circle"></i> 親子同行優惠：現折NT$8,000</li>
+                        <li><i class="fas fa-check-circle"></i> 或選擇：贈送學習機乙台</li>
                     </ul>
                     <p class="small-text">名額有限（限額親子 30 組），請盡早報名！</p>
                 </div>
@@ -985,57 +357,66 @@
         </div>
     </footer>
 
-    <script>
-        // JavaScript 程式碼：倒數計時器
-        // 截止日期：2025年 11月 26日 23:59:59 
-        const deadline = new Date("Nov 26, 2025 23:59:59").getTime();
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = deadline - now;
+    <div id="modal-1" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-gallery">
+                <div class="gallery-track">
+                    <img src="1對1課程.png" alt="一對一課程內容說明" class="gallery-img">
+                    <img src="一對一上課照.png" alt="一對一上課情境" class="gallery-img active">
+                                      
+                </div>
+                
+                <button class="gallery-prev-btn" onclick="galleryMoveSlide(1, -1)">&#10094;</button>
+                <button class="gallery-next-btn" onclick="galleryMoveSlide(1, 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-2" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-gallery">
+                <div class="gallery-track">
+                    <img src="皇家課程.png" alt="皇家特色課程" class="gallery-img active">
             
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            const formatTime = (t) => t < 10 ? "0" + t : t;
+                </div>
+                
+                <button class="gallery-prev-btn" onclick="galleryMoveSlide(2, -1)">&#10094;</button>
+                <button class="gallery-next-btn" onclick="galleryMoveSlide(2, 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
 
-            document.getElementById("countdown-timer").innerHTML = 
-                `<span class="countdown-value">${formatTime(days)}</span> 天 
-                <span class="countdown-value">${formatTime(hours)}</span> 時 
-                <span class="countdown-value">${formatTime(minutes)}</span> 分 
-                <span class="countdown-value">${formatTime(seconds)}</span> 秒`;
-            
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown-timer").innerHTML = "報名已截止！";
-            }
-        }, 1000);
-        
-        // JavaScript 程式碼：漢堡選單切換邏輯
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.toggle('active');
-        }
-        
-        function closeMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            // 確保選單在點擊後關閉，但只在行動裝置模式下生效
-            if (window.innerWidth <= 768) {
-                navMenu.classList.remove('active');
-            }
-        }
+    <div id="modal-3" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-gallery">
+                <div class="gallery-track">
+                    <img src="跳島.png" alt="國際志工" class="gallery-img active">
+                    <img src="國際志工.png" alt="國際志工" class="gallery-img active">
+                </div>
+                
+                <button class="gallery-prev-btn" onclick="galleryMoveSlide(3, -1)">&#10094;</button>
+                <button class="gallery-next-btn" onclick="galleryMoveSlide(3, 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
 
-        // 監聽所有導覽連結，點擊後關閉選單（已在 HTML 中加入 onclick="closeMenu()"）
-        // 確保視窗大小變化時，選單狀態重置
-        window.addEventListener('resize', function() {
-            const navMenu = document.getElementById('nav-menu');
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <div id="modal-4" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-gallery">
+                <div class="gallery-track">
+                    <img src="專業師資.png" alt="專業師資" class="gallery-img active">
+                    
+                </div>
+                
+                <button class="gallery-prev-btn" onclick="galleryMoveSlide(4, -1)">&#10094;</button>
+                <button class="gallery-next-btn" onclick="galleryMoveSlide(4, 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script> 
 
 </body>
 </html>
