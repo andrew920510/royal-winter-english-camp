@@ -1,0 +1,1727 @@
+/* --- 1. 基本設定與字體 --- */
+
+:root {
+
+--primary-color: #38A1D8; /* 活潑的天藍色 (代表學習、天空) */
+
+--secondary-color: #FF8C00; /* 亮橙色 (代表活力、陽光、強調) */
+
+--accent-color: #4CAF50; /* 綠色 (代表安全、健康) */
+
+--text-dark: #2c3e50; /* 深藍灰色，專業且易讀 */
+
+--text-light: #ecf0f1;
+
+--section-bg: #f4f7f9; /* 淺灰色/淺藍色背景 */
+
+--shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* 稍微明顯的陰影 */
+
+}
+
+
+
+* {
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+
+
+body {
+
+font-family: '微軟正黑體', 'Arial', sans-serif;
+
+line-height: 1.7; /* 增加行高，更適合親子閱讀 */
+
+color: var(--text-dark);
+
+background-color: #fff;
+
+scroll-behavior: smooth; /* 平滑捲動效果 */
+
+font-size: 16px; /* 基礎字體稍大 */
+
+}
+
+
+
+.container {
+
+width: 90%; /* 寬度稍微放寬 */
+
+max-width: 1200px;
+
+margin: auto;
+
+padding: 0 15px;
+
+}
+
+
+
+/* --- 2. 導覽列 (Navbar) --- */
+
+.navbar {
+
+background: #fff;
+
+color: var(--text-dark);
+
+padding: 12px 0;
+
+border-bottom: 3px solid var(--primary-color); /* 底部邊線強調 */
+
+position: sticky;
+
+top: 0;
+
+z-index: 1000;
+
+}
+
+
+
+.navbar .container {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+}
+
+
+
+/* Logo 容器樣式 */
+
+.logo {
+
+text-decoration: none;
+
+display: flex; /* 啟用 Flexbox */
+
+align-items: center; /* 垂直置中 */
+
+height: 50px; /* 設置為 Logo 應有的高度 */
+
+
+}
+
+
+
+/* 標誌圖片樣式 (使用 img 標籤) */
+
+.nav-logo {
+
+
+height: 100%; /* 圖片高度佔滿 logo 容器 */
+
+width: auto; /* 保持圖片比例 */
+
+object-fit: contain; /* 確保圖片比例維持，不變形 */
+
+margin-right: 15px; /* 與右側導覽連結保持距離 */
+
+}
+
+
+
+.nav-links {
+
+list-style: none;
+
+display: flex;
+
+transition: transform 0.3s ease-in-out;
+
+}
+
+
+
+.nav-links li {
+
+margin-left: 20px;
+
+}
+
+
+
+.nav-links a {
+
+color: var(--text-dark);
+
+text-decoration: none;
+
+font-weight: 600;
+
+transition: color 0.3s;
+
+position: relative;
+
+padding-bottom: 5px;
+
+}
+
+.nav-links a::after {
+
+content: '';
+
+position: absolute;
+
+width: 0;
+
+height: 3px;
+
+background: var(--secondary-color);
+
+left: 0;
+
+bottom: 0;
+
+transition: width 0.3s;
+
+}
+
+
+
+.nav-links a:hover::after {
+
+width: 100%;
+
+}
+
+
+
+
+
+/* 導覽列中的按鈕樣式 - 橙色突顯 */
+
+.btn-nav {
+
+background-color: var(--secondary-color);
+
+color: white !important;
+
+padding: 10px 20px; /* 增加內距，使按鈕更大 */
+
+border-radius: 20px;
+
+box-shadow: 0 4px var(--text-dark);
+
+transition: all 0.2s;
+
+/* 確保文字置中 */
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 1.1rem; /* 放大字體 */
+
+height: 40px; /* 確保按鈕高度一致 */
+
+line-height: 1; /* 取消行高影響，讓 flex 置中更精確 */
+
+}
+
+.btn-nav:hover {
+
+background-color: #e67e22;
+
+transform: translateY(-2px);
+
+box-shadow: 0 6px var(--text-dark);
+
+}
+
+
+
+/* 漢堡選單按鈕樣式 */
+
+.hamburger-menu {
+
+display: none; /* 預設在桌機上隱藏 */
+
+cursor: pointer;
+
+font-size: 24px;
+
+color: var(--primary-color);
+
+}
+
+
+
+
+
+/* --- 3. 通用元件 (按鈕/標題) --- */
+
+.section {
+
+padding: 80px 0; /* 區塊間距更大，更舒服 */
+
+}
+
+
+
+.section-title {
+
+text-align: center;
+
+font-size: 2.5rem;
+
+font-weight: 800;
+
+margin-bottom: 50px;
+
+color: var(--text-dark);
+
+position: relative;
+
+padding-bottom: 15px;
+
+}
+
+/* 活潑的標題裝飾 */
+
+
+
+
+
+
+
+.btn {
+
+display: inline-block;
+
+padding: 15px 40px;
+
+border-radius: 30px; /* 超大圓角 */
+
+text-decoration: none;
+
+font-weight: bold;
+
+text-align: center;
+
+transition: all 0.3s;
+
+box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.btn-primary {
+
+background-color: var(--primary-color);
+
+color: white;
+
+border: none;
+
+}
+
+
+
+.btn-primary:hover {
+
+background-color: #2a8bc9;
+
+transform: translateY(-3px);
+
+box-shadow: 0 9px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.btn-large {
+
+font-size: 1.3rem;
+
+padding: 20px 50px;
+
+}
+
+
+
+/* --- 4. 首頁橫幅 (Hero Section) --- */
+
+.hero-section {
+
+/* **重要：設定相對定位讓裝飾圖片可以絕對定位** */
+
+position: relative;
+
+
+/* 提示: 請在同資料夾放入 hero-bg.jpg 圖片，或替換為你的圖片路徑 */
+
+background-image: linear-gradient(rgba(56, 161, 216, 0.7), rgba(56, 161, 216, 0.7)), url('hero-bg.jpg');
+
+background-size: cover;
+
+background-position: center;
+
+color: white;
+
+text-align: center;
+
+padding: 120px 0;
+
+}
+
+
+
+/* 裝飾圖片樣式 (上次新增的部分) */
+
+.hero-decoration-img {
+
+position: absolute; /* 絕對定位 */
+
+bottom: 0; /* 貼齊底部 */
+
+right: 5%; /* 距離右側 5% */
+
+max-width: 600px; /* 最大寬度 */
+
+height: auto;
+
+opacity: 0.5; /* 半透明效果 (50%) */
+
+z-index: 1; /* 確保圖片在背景之上，但在文字之下 */
+
+pointer-events: none; /* 讓圖片不影響點擊下方的內容 */
+
+}
+
+
+
+.hero-section h1 {
+
+font-size: 4rem;
+
+margin-bottom: 15px;
+
+font-weight: 900;
+
+text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.hero-section h2 {
+
+font-size: 2.2rem;
+
+margin-bottom: 40px;
+
+color: var(--secondary-color);
+
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.hero-section p {
+
+font-size: 1.3rem;
+
+margin-bottom: 50px;
+
+}
+
+
+
+/* --- 5. 營隊亮點 (Features) --- */
+
+.features-section {
+
+background-color: #fff; /* 保持白色，更清晰 */
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+
+
+.feature-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+gap: 30px;
+
+text-align: center;
+
+}
+
+
+
+.feature-card {
+
+background: var(--section-bg);
+
+padding: 40px 30px;
+
+border-radius: 15px; /* 圓角增加親和力 */
+
+box-shadow: var(--shadow);
+
+border-bottom: 5px solid var(--secondary-color); /* 底部亮邊強調 */
+
+transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+
+.feature-card:hover {
+
+transform: translateY(-8px) scale(1.02); /* 活潑的跳動效果 */
+
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+
+
+.features-section-img {
+
+position: absolute;
+
+
+/* 調整位置，假設您希望它在左上方區域 */
+
+top: 50px; /* 距離頂部 50px */
+
+left: 0; /* 貼齊左側 */
+
+
+width: 400px; /* 設定圖片/元素的固定寬度 */
+
+height: auto;
+
+max-width: none; /* 忽略父容器 max-width 限制 */
+
+
+/* 【關鍵 2：控制堆疊順序，讓內容覆蓋它】 */
+
+z-index: 1; /* 設定一個較低的 z-index */
+
+
+
+opacity: 0.7;
+
+pointer-events: none; /* 防止圖片阻擋下方的點擊事件 */
+
+}
+
+
+
+/* 確保卡片內容覆蓋圖片 */
+
+.feature-card {
+
+/* ... 原始樣式 ... */
+
+position: relative; /* 確保 .feature-card 成為新的堆疊上下文 */
+
+z-index: 2; /* 確保卡片內容堆疊在圖片之上 (z-index: 1) */
+
+}
+
+
+
+
+
+.icon-large {
+
+font-size: 3.5rem;
+
+color: var(--primary-color);
+
+margin-bottom: 15px;
+
+}
+
+
+
+.feature-card h3 {
+
+margin-bottom: 15px;
+
+color: var(--text-dark);
+
+font-size: 1.4rem;
+
+}
+
+
+
+/* --- 6. 課程介紹 (Curriculum) --- */
+
+.curriculum-section {
+
+background-color: var(--section-bg);
+
+}
+
+
+
+.curriculum-content {
+
+display: grid;
+
+/* 核心：確保在大螢幕下分為兩欄 */
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 25px;
+
+margin-bottom: 40px;
+
+/* 讓內容在中央對齊 */
+
+max-width: 900px;
+
+margin-left: auto;
+
+margin-right: auto;
+
+}
+
+
+
+/* 課程項目卡片樣式調整 */
+
+.curriculum-item {
+
+padding: 25px; /* 恢復內距，讓內容有足夠空間 */
+
+background-color: white;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+border: 1px solid #ddd;
+
+
+/* 保持原樣和大小 */
+
+display: flex; /* 使用 Flexbox 讓內容垂直排版 */
+
+flex-direction: column;
+
+justify-content: flex-start; /* 內容從頂部開始 */
+
+
+cursor: pointer;
+
+transition: transform 0.2s, box-shadow 0.2s;
+
+position: relative;
+
+min-height: 200px; /* 設定最小高度，確保卡片視覺上更一致 */
+
+}
+
+
+
+.curriculum-item:hover {
+
+transform: translateY(-5px);
+
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+/* 確保圖片和標題結構 */
+
+.curriculum-item i {
+
+color: var(--secondary-color);
+
+font-size: 1.6rem;
+
+margin-right: 12px;
+
+}
+
+
+
+/* 調整 h3 樣式，讓它與圖標在同一行 */
+
+.curriculum-item h3 {
+
+display: flex;
+
+align-items: center;
+
+color: var(--primary-color);
+
+font-size: 1.2rem;
+
+margin-bottom: 10px;
+
+/* 確保 h3 內的圖標 (i) 不會被 margin 影響 */
+
+}
+
+/* 調整段落樣式，使其佔用剩餘空間，確保卡片等高時文字靠上 */
+
+.curriculum-item p {
+
+flex-grow: 1; /* 允許段落擴展，推開底部的「查看詳情」 */
+
+margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* 「點擊查看詳情」的樣式，推到卡片底部 */
+
+.view-details {
+
+display: block;
+
+text-align: right;
+
+color: var(--secondary-color);
+
+font-weight: bold;
+
+font-size: 0.95rem;
+
+margin-top: auto; /* 關鍵：將它推到 Flex 容器的底部 */
+
+}
+
+
+
+/* ... (其餘原有的 .parent-focus 樣式) ... */
+
+
+
+.parent-focus {
+
+background-color: #fffae6; /* 淺黃色，強調家庭主題 */
+
+color: var(--text-dark);
+
+padding: 35px;
+
+border-radius: 15px;
+
+text-align: center;
+
+margin-top: 40px;
+
+border: 2px dashed var(--secondary-color); /* 虛線邊框，活潑 */
+
+}
+
+
+
+.parent-focus h3 {
+
+margin-bottom: 15px;
+
+font-size: 1.8rem;
+
+color: var(--secondary-color);
+
+}
+
+
+
+/* --- 7. 安全與後勤 (Safety & Logistics) --- */
+
+.safety-section {
+
+background-color: #fff;
+
+}
+
+
+
+.safety-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 30px;
+
+text-align: center;
+
+}
+
+
+
+.safety-item {
+
+background: var(--section-bg);
+
+padding: 30px;
+
+border-radius: 10px;
+
+border-bottom: 4px solid var(--accent-color);
+
+}
+
+
+
+.safety-item i {
+
+font-size: 3rem;
+
+color: var(--accent-color);
+
+margin-bottom: 10px;
+
+}
+
+
+
+.safety-item h4 {
+
+color: var(--text-dark);
+
+margin-bottom: 5px;
+
+font-size: 1.2rem;
+
+}
+
+
+
+/* --- 8. FAQ 常見問答樣式 --- */
+
+.faq-section {
+
+background-color: #fff;
+
+}
+
+
+
+.faq-list {
+
+max-width: 900px;
+
+margin: 0 auto;
+
+list-style: none;
+
+padding: 0;
+
+}
+
+
+
+.faq-item {
+
+margin-bottom: 15px;
+
+border: 1px solid #ddd;
+
+border-radius: 8px;
+
+overflow: hidden;
+
+background-color: #fff;
+
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+.faq-question {
+
+background-color: var(--primary-color);
+
+color: white;
+
+padding: 15px 20px;
+
+font-weight: 700;
+
+cursor: pointer;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+font-size: 1.1rem;
+
+}
+
+
+
+.faq-question i {
+
+font-size: 0.9rem;
+
+margin-left: 10px;
+
+}
+
+
+
+.faq-answer {
+
+padding: 15px 20px;
+
+background-color: #fff;
+
+border-top: 1px solid #eee;
+
+color: var(--text-dark);
+
+/* 模擬手風琴效果，預設展開以節省 JS */
+
+}
+
+
+
+/* FAQ 分類標題 */
+
+.faq-category {
+
+font-size: 1.8rem;
+
+color: var(--secondary-color);
+
+margin-top: 30px;
+
+margin-bottom: 15px;
+
+padding-left: 10px;
+
+border-left: 5px solid var(--secondary-color);
+
+}
+
+
+
+/* --- 9. 報名資訊與倒數 (Registration & Countdown) --- */
+
+.register-section {
+
+text-align: center;
+
+background-color: var(--primary-color);
+
+color: white;
+
+padding-bottom: 80px;
+
+}
+
+
+
+.register-section .section-title {
+
+color: white;
+
+}
+
+.register-section .section-title::after {
+
+content: '⏰';
+
+}
+
+
+
+.countdown-box {
+
+background-color: #e74c3c;
+
+color: white;
+
+padding: 25px;
+
+border-radius: 15px;
+
+margin: 30px auto 50px auto;
+
+max-width: 700px;
+
+box-shadow: 0 8px 0 #c0392b;
+
+}
+
+
+
+.countdown-value {
+
+font-size: 3rem;
+
+font-weight: 900;
+
+margin: 0 10px;
+
+color: var(--secondary-color);
+
+}
+
+
+
+.countdown-label {
+
+display: block;
+
+font-size: 1rem;
+
+margin-bottom: 5px;
+
+}
+
+
+
+.register-info-grid {
+
+display: flex;
+
+justify-content: center;
+
+gap: 30px;
+
+margin-bottom: 50px;
+
+flex-wrap: wrap;
+
+}
+
+
+
+.info-card {
+
+flex: 1;
+
+max-width: 450px;
+
+padding: 35px;
+
+border-radius: 10px;
+
+text-align: left;
+
+background: white;
+
+color: var(--text-dark);
+
+box-shadow: var(--shadow);
+
+}
+
+
+
+.info-card h3 {
+
+border-bottom: 3px solid var(--primary-color);
+
+padding-bottom: 5px;
+
+margin-bottom: 15px;
+
+color: var(--primary-color);
+
+font-size: 1.5rem;
+
+}
+
+
+
+.contact-detail {
+
+margin-bottom: 10px;
+
+font-size: 1.1rem;
+
+}
+
+
+
+.contact-detail i {
+
+width: 25px;
+
+color: var(--primary-color);
+
+}
+
+
+
+.price {
+
+font-size: 3rem;
+
+font-weight: 900;
+
+color: #e74c3c;
+
+margin-bottom: 10px;
+
+}
+
+
+
+.offer-card {
+
+background-color: #e8f9e8;
+
+border: 3px solid var(--accent-color);
+
+}
+
+
+
+.offer-list li {
+
+margin-bottom: 10px;
+
+font-size: 1.2rem;
+
+}
+
+
+
+.offer-list i {
+
+color: var(--accent-color);
+
+margin-right: 10px;
+
+}
+
+
+
+.btn-cta {
+
+background-color: var(--secondary-color);
+
+color: white;
+
+font-size: 1.5rem;
+
+padding: 20px 60px;
+
+box-shadow: 0 8px 0 #e67e22;
+
+}
+
+
+
+.btn-cta:hover {
+
+background-color: #e67e22;
+
+transform: translateY(-4px);
+
+box-shadow: 0 10px 0 #c0392b;
+
+}
+
+
+
+/* --- 10. 頁尾 (Footer) --- */
+
+.footer {
+
+background-color: var(--text-dark);
+
+color: var(--text-light);
+
+text-align: center;
+
+padding: 25px 0;
+
+font-size: 1rem;
+
+}
+
+
+
+
+
+/* --- 11. 響應式設計 (Media Queries for Mobile) --- */
+
+@media (max-width: 768px) {
+
+
+/* RWD 文字優化：調整基礎字體大小 */
+
+body {
+
+font-size: 14px;
+
+}
+
+
+/* RWD 區塊優化：調整 Section 間距 */
+
+.section {
+
+padding: 40px 0; /* 縮小區塊間距 */
+
+}
+
+
+
+.navbar .container {
+
+flex-direction: row; /* 保持 Logo 和漢堡按鈕橫向排列 */
+
+justify-content: space-between;
+
+align-items: center;
+
+padding-top: 5px; /* 增加頂部空間 */
+
+padding-bottom: 5px;
+
+}
+
+
+/* RWD 內容優化：首頁橫幅 */
+
+.hero-section {
+
+padding: 80px 0; /* 維持適當高度 */
+
+}
+
+
+/* 裝飾圖片 RWD 調整 */
+
+.hero-decoration-img {
+
+max-width: 150px; /* 縮小圖片 */
+
+right: 0; /* 貼齊右邊 */
+
+bottom: 5px; /* 貼齊底部一點點 */
+
+opacity: 0.3; /* 降低透明度，避免干擾 */
+
+}
+
+
+
+.hero-section h1 {
+
+font-size: 2.5rem; /* 確保主標題可讀 */
+
+margin-bottom: 10px;
+
+}
+
+
+
+.hero-section h2 {
+
+font-size: 1.5rem; /* 確保副標題可讀 */
+
+margin-bottom: 20px;
+
+}
+
+
+
+.hero-section p {
+
+font-size: 1rem;
+
+margin-bottom: 30px;
+
+}
+
+
+
+.section-title {
+
+font-size: 2rem; /* 縮小區塊標題 */
+
+margin-bottom: 30px; /* 縮小間距 */
+
+}
+
+
+/* RWD 內容優化：營隊亮點卡片 */
+
+.feature-card {
+
+padding: 25px 15px; /* 縮小卡片內距 */
+
+}
+
+
+.icon-large {
+
+font-size: 3rem; /* 縮小圖標 */
+
+margin-bottom: 10px;
+
+}
+
+
+
+/* RWD 內容優化：按鈕字體 */
+
+.btn-large {
+
+padding: 10px 25px;
+
+font-size: 1rem;
+
+}
+
+
+/* RWD 內容優化：導覽列按鈕 (確保在漢堡選單內文字適中) */
+
+.btn-nav {
+
+font-size: 1rem;
+
+padding: 8px 18px;
+
+}
+
+
+
+/* RWD 內容優化：FAQ & 其他 */
+
+.faq-question {
+
+font-size: 1.0rem;
+
+}
+
+
+.faq-category {
+
+font-size: 1.5rem;
+
+}
+
+
+.countdown-value {
+
+font-size: 2.5rem;
+
+}
+
+
+/* 漢堡選單的顯示/隱藏邏輯 */
+
+.hamburger-menu {
+
+display: block;
+
+}
+
+
+
+.nav-links {
+
+display: none;
+
+flex-direction: column;
+
+width: 100%;
+
+top: 75px;
+
+left: 0;
+
+background-color: #fff;
+
+border-top: 1px solid #eee;
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+padding: 10px 0;
+
+z-index: 999;
+
+}
+
+
+.nav-links.active {
+
+display: flex;
+
+}
+
+
+
+.nav-links li {
+
+margin: 0;
+
+text-align: center;
+
+padding: 10px 0;
+
+border-bottom: 1px solid #f4f4f4;
+
+}
+
+
+.nav-links li:last-child {
+
+border-bottom: none;
+
+}
+
+
+.btn-nav {
+
+display: block;
+
+margin: 10px auto;
+
+width: 80%;
+
+}
+
+
+
+.curriculum-content {
+
+grid-template-columns: 1fr;
+
+max-width: 100%;
+
+}
+
+
+
+.register-info-grid {
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+
+.info-card {
+
+max-width: 90%;
+
+}
+
+
+.btn-cta {
+
+font-size: 1.3rem;
+
+padding: 15px 40px;
+
+}
+
+}
+
+
+
+/* --- 12. 模態視窗 (Modal) 樣式 --- */
+
+
+
+/* 模態視窗背景 */
+
+.custom-modal {
+
+display: none; /* 必須為 none，讓下方元素可點擊 */
+
+position: fixed;
+
+z-index: 10000;
+
+left: 0;
+
+top: 0;
+
+width: 100%;
+
+height: 100%;
+
+
+background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+/* 模態視窗內容區塊 */
+
+.modal-content {
+
+background-color: #fefefe;
+
+margin: auto; /* 完美居中 */
+
+padding: 30px;
+
+border: 3px solid var(--primary-color);
+
+width: 90%;
+
+max-width: 700px;
+
+border-radius: 10px;
+
+position: relative;
+
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+
+max-height: 90vh; /* 限制內容最大高度 */
+
+overflow-y: auto; /* 內容超出時顯示滾動條 */
+
+}
+
+
+
+/* 關閉按鈕 */
+
+.close-button {
+
+color: #aaa;
+
+float: right;
+
+font-size: 36px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+line-height: 1;
+
+position: absolute;
+
+top: 10px;
+
+right: 20px;
+
+}
+
+
+
+.close-button:hover,
+
+.close-button:focus {
+
+color: var(--secondary-color);
+
+text-decoration: none;
+
+}
+
+
+
+/* 模態視窗標題和描述 */
+
+.modal-title {
+
+font-size: 1.8rem;
+
+font-weight: bold;
+
+color: var(--primary-color);
+
+margin-bottom: 15px;
+
+text-align: center;
+
+border-bottom: 2px solid var(--section-bg);
+
+padding-bottom: 10px;
+
+}
+
+
+
+.modal-description {
+
+padding-bottom: 15px;
+
+color: var(--text-dark);
+
+}
+
+
+
+
+
+/* 模態視窗內圖片展示區 (Gallery) 樣式 - 輪播外框 */
+
+.modal-gallery {
+
+position: relative;
+
+width: 100%;
+
+height: 450px; /* 【關鍵 1：設定固定高度】 */
+
+overflow: hidden; /* 【關鍵 2：隱藏橫向溢出的圖片】 */
+
+background-color: #eee;
+
+border-radius: 5px;
+
+}
+
+
+
+/* 圖片軌道樣式 */
+
+.gallery-track {
+
+display: flex; /* 【關鍵 3：讓所有圖片橫向排列】 */
+
+height: 100%;
+
+width: 100%;
+
+transition: transform 0.4s ease-in-out; /* 平滑切換動畫 */
+
+}
+
+
+
+.gallery-img {
+
+min-width: 100%; /* 【關鍵 4：每張圖片佔據軌道的 100% 寬度】 */
+
+height: 100%;
+
+
+object-fit: contain; /* 【關鍵 5：等比例縮放】 */
+
+
+/* 移除 display: none; 和 active 類別控制，由 JS 平移取代 */
+
+}
+
+
+
+
+
+/* 畫廊箭頭按鈕 */
+
+.gallery-prev-btn, .gallery-next-btn {
+
+position: absolute;
+
+top: 50%;
+
+transform: translateY(-50%);
+
+background: rgba(0, 0, 0, 0.5);
+
+color: white;
+
+border: none;
+
+padding: 10px 15px;
+
+cursor: pointer;
+
+z-index: 10;
+
+font-size: 1.8rem;
+
+line-height: 1;
+
+transition: background-color 0.3s;
+
+}
+
+
+
+.gallery-prev-btn:hover, .gallery-next-btn:hover {
+
+background: rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+.gallery-prev-btn {
+
+left: 10px;
+
+border-radius: 5px;
+
+}
+
+
+
+.gallery-next-btn {
+
+right: 10px;
+
+border-radius: 5px;
+
+}
+
+
+
+/* RWD for Modal */
+
+@media (max-width: 768px) {
+
+.modal-content {
+
+width: 95%;
+
+margin: auto; /* 在小螢幕下也居中 */
+
+padding: 20px;
+
+max-height: 85vh;
+
+}
+
+
+/* RWD 調整：在小螢幕上縮小圖片容器的高度 */
+
+.modal-gallery {
+
+height: 300px;
+
+}
+
+}
