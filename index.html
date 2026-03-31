@@ -1,422 +1,238 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【宿霧親子共學】海外沉浸式英語營隊 - 常見問答手冊</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <title>菲律賓遊學代辦 | 首頁</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#hero" class="logo">
-                <img 
-                    src="logo.png" 
-                    alt="皇家遊學營 Logo" 
-                    class="nav-logo">
-            </a>
-            
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="index.html"><img src="富學logo.png" alt="富學 Logo" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schools.html">精選學校</a></li>
+                    <li class="nav-item"><a class="nav-link" href="activities.html">活動＆旅遊</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">學員分享</a></li>
+                    <li class="nav-item"><a class="nav-link" href="peca.html">PECA 認證</a></li>
+                    <li class="nav-item ms-2 d-flex align-items-center">
+                        <a class="btn-social-line" href="#"><i class="bi bi-line fs-5"></i> 線上諮詢</a>
+                        <a class="btn-social-fb" href="#"><i class="bi bi-facebook fs-6"></i> 臉書專頁</a>
+                    </li>
+                </ul>
             </div>
-            
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#features" onclick="closeMenu()">營隊亮點</a></li>
-                <li><a href="#curriculum" onclick="closeMenu()">課程優勢</a></li>
-                <li><a href="#safety" onclick="closeMenu()">安全保障</a></li>
-                <li><a href="#faq" onclick="closeMenu()">常見問答</a></li>
-                <li><a href="#register" class="btn btn-nav" onclick="closeMenu()">立即報名</a></li>
-            </ul>
         </div>
     </nav>
 
-    <header id="hero" class="hero-section">
+    <header class="hero-section">
         <div class="container">
-            <h1>海外沉浸式 親子共學體驗</h1>
-            <h2>家長親身見證，孩子英語突飛猛進的蛻變旅程！</h2>
-            <p>2026 寒假梯次｜宿霧全英語環境 x 密集客製化課程</p>
-            <a href="#register" class="btn btn-primary btn-large">限時優惠，立即搶位！</a>
+            <h1 class="display-3 fw-bold mb-4">邊玩邊學，你的英文突飛猛進</h1>
+            <p class="lead mb-5">宿務・克拉克・碧瑤 | 一對一密集課程 | 週末跳島度假</p>
+            <a href="schools.html" class="btn btn-custom btn-lg">尋找你的學校</a>
         </div>
-        
-        <img 
-            src="飛機.png" 
-            alt="搭飛機" 
-            class="hero-decoration-img">
-            
     </header>
 
-    <section id="features" class="section features-section">
-        <div class="container">
-            <h2 class="section-title">為什麼選擇我們的 「親子共學營」？</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-rocket icon-large"></i>
-                    <h3>加速英語能力突破</h3>
-                    <p>全英語密集環境、每日 8 堂課（含 4 堂一對一客製化教學），讓孩子想不進步都很難。</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-handshake-angle icon-large"></i>
-                    <h3>難忘的家庭學習旅程</h3>
-                    <p>家長參與親子課程與互動任務，親眼見證孩子從開口到自信表達的學習成長。</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt icon-large"></i>
-                    <h3>最高規格的安全照護</h3>
-                    <p>24 小時校內宿舍封閉式管理、專車接送、中籍領隊隨行，讓家長安心無憂。</p>
-                </div>
-            </div>
+    <section class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title">為什麼選擇菲律賓遊學？</h2>
         </div>
-        <img 
-            src="親子共學.png" 
-            alt="親子共學" 
-            class="section features-section-img">
-    </section>
-
-    <section id="curriculum" class="section curriculum-section">
-        <div class="container">
-            <h2 class="section-title">【課程優勢】密集 x 客製化 x 實踐生活</h2>
-            <div class="curriculum-content">
-    
-                <div class="curriculum-item modal-trigger" data-modal-id="modal-1">
-                    <i class="fas fa-chalkboard-teacher icon-small"></i>
-                    <h3>高密度一對一教學</h3>
-                    <p>每日四堂 1 對 1 課程，根據孩子的英文程度與目標量身打造教學內容，效果顯著。</p>
-                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
-                </div>
-                
-                <div class="curriculum-item modal-trigger" data-modal-id="modal-2">
-                    <i class="fas fa-feather-alt icon-small"></i>
-                    <h3>獨家加值特色課程</h3>
-                    <p>除了正規課程外，每日再加 2 堂皇家主題英語特色課，結合「美語 x 健康 x ⽣活」。</p>
-                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
-                </div>
-                
-                <div class="curriculum-item modal-trigger" data-modal-id="modal-3">
-                    <i class="fas fa-globe-asia icon-small"></i>
-                    <h3>文化實踐與應用</h3>
-                    <p>安排跳島、國際志工等文化體驗與戶外英語任務，讓孩子在真實情境中「玩中學、用中記」。</p>
-                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
-                </div>
-                
-                <div class="curriculum-item modal-trigger" data-modal-id="modal-4">
-                    <i class="fas fa-award icon-small"></i>
-                    <h3>專業師資與成果保證</h3>
-                    <p>老師皆為持證教師，發音標準。結業頒發證書並提供學習成果報告，見證孩子進步軌跡。</p>
-                    <span class="view-details">點擊查看詳情 <i class="fas fa-chevron-right"></i></span>
-                </div>
-            </div>
-            
-            <div class="parent-focus">
-                <h3>💖 家長參與設計： 見證孩子改變的最佳時刻</h3>
-                <p>家長與孩子共同住宿、共進午晚餐，並參與親子互動任務。孩子上課時，家長可自由活動或選擇英文課程，是創造家庭學習旅程的絕佳機會！</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="safety" class="section safety-section">
-        <div class="container">
-            <h2 class="section-title">【全程安心】 最高規格的 安全與生活</h2>
-            <div class="safety-grid">
-                <div class="safety-item">
-                    <i class="fas fa-lock"></i>
-                    <h4>24H 校園封閉管理</h4>
-                    <p>住宿統一在校內，24小時警衛與監控，進出嚴格管制。</p>
-                </div>
-                <div class="safety-item">
-                    <i class="fas fa-bus-alt"></i>
-                    <h4>全程專車接送與陪同</h4>
-                    <p>從機場到學校全程專車，活動時有中籍領隊與當地老師全程陪同。</p>
-                </div>
-                <div class="safety-item">
-                    <i class="fas fa-notes-medical"></i>
-                    <h4>駐校護士與健康照護</h4>
-                    <p>學校配有護士與合作醫院，餐食提供中西合併及台式菜色，兼顧營養與口味。</p>
-                </div>
-                <div class="safety-item">
-                    <i class="fas fa-comment-dots"></i>
-                    <h4>即時回饋與視訊關懷</h4>
-                    <p>LINE 群組每日更新照片、雲端相簿紀錄，並提供夜間視訊時間，克服孩子想家。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="faq" class="section faq-section">
-        <div class="container">
-            <h2 class="section-title">【常見問答】 解開您的所有疑慮</h2>
-            <div class="intro-text" style="text-align: center; margin-bottom: 30px;">
-                <p>孩子的未來，從開口說英語開始。皇家菁英美語結合海外浸潤課程，帶孩子走進世界，學習自信、培養獨立。</p>
-            </div>
-            
-            <ul class="faq-list">
-                
-                <li class="faq-category">一、課程與學習相關</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q1：皇家 & IU親子遊學的核心特色？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：「美語 × 健康 × 生活」三合一，全英語口說課程結合日常運動與城市生活體驗。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q2： 與其他遊學團最大課程差異是什麼？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：皇家菁英美語親子遊學營除了 IU 正規課外，1/26 – 2/8 每日再多 2 堂皇家主題英語特色課，總學習量顯著增加。這些課程特別設計將台灣學生所學、所習慣的內容融入其中，讓孩子在熟悉的環境中學習英語，進一步提升學習效果和自信心。即使回到台灣後，孩子們仍能在課本中看到相關內容，持續鞏固所學。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q3：課程內容包含哪些？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：課程依程度分班，採「1對1英語教學」＋「小班互動課」並行，涵蓋聽、說、讀、寫四大能力。每日 8堂課，上午語言密集學習，下午活動任務式英語，讓孩子在生活中實踐英文。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q4：老師是外師嗎？教學品質如何？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：菲律賓老師皆具備 TESOL / TEFL 證照，受過兒童英語教學與口音訓練。皇家合作學校為宿霧當地高評價語言中心，確保每位教師發音標準、課堂互動性強。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q5：課程難度會不會太難或太簡單？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：到校時會先安排英文程度測驗，學校會依照聽、說、讀、寫各方面的程度安排適合教材，確保學習目標明確。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q6：每天上幾堂課？學習時數多嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：每天約8堂課，包含每日4堂1對1課程、4堂小組互動課或活動課，學習密度高、成效明顯。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q7：除了課堂學習，還有其他活動嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：除了課堂學習外，會安排文化與體驗活動，如海島探索、當地市集英語任務、手作課程等，讓孩子在「玩中學、用中記」，自然開口說英語。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q8：師資如何選、老師口音會不會影響？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：老師需持有 TESOL/TEFL 或菲律賓教育證書，入校前通過教學觀摩與口音測試（學校提供測試標準），課程以互動為主，若家長/學生反映不合適可申請更換老師（依校方流程）。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q9： 雨天或氣候不佳怎麼辦？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：調整為室內文化課、英語電影、角色扮演等備用方案。</div>
-                </li>
-
-                <li class="faq-category">二、住宿與生活</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q10：IU English Academy 校區位在哪裡？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：營隊位於菲律賓宿霧市中心 IU English Academy 校區，步行約 10 分鐘可達 Ayala Mall。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q11：住宿是學生宿舍還是飯店？幾人一間房？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：為確保學生安全，統一校內住宿舍，皆含冷氣、熱水、每日清潔與洗衣服務。冬令營為3人一間房，兩週升級為2人房，每人需補美金60元差額。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q12：宿舍與環境安全嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：宿舍採封閉式校園管理，24小時警衛與監控系統。僅有學生與工作人員可進出，安全性高。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q13：餐食如何？孩子吃得習慣嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：每日三餐均由校方廚房精心準備，餐食融合多國風味料理，採自助式形式，選擇豐富。同時也有台式菜色，貼近台灣孩子的口味，因此大多數學生都能輕鬆適應。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q14：特殊飲食需求可否安排？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：可提供蛋奶素、全素與過敏客製餐，報名時註明即可。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q15：手機使用規範？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：週一至週五夜間 21:00–22:00 開放，週末彈性使用。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q16：有醫護或保險安排嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：學校配有合作醫院與駐校護士，旅平險與海外醫療保險由家長依需求自行購買。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q17：住宿環境與設備如何？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：學生可選擇校內宿舍或合作飯店，皆有冷氣、熱水、獨立衛浴、房間清潔與洗衣服務。宿舍提供專屬生活老師協助孩子日常起居。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q18：孩子如果想家怎麼辦？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：隨團中籍老師與學校輔導老師會協助適應，並提供「夜間視訊時間」（例如每晚 20:00 給家長 5–10 分鐘視訊），同時鼓勵孩子寫「每日學習亮點」，老師會回傳給家長。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q19：遇到生病或受傷如何處理？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：學校有駐校護士與合作醫院，若需就醫會先電話通知家長並取得同意，緊急情況則依醫療需求先處理並於第一時間通報家長。所有費用與保險理賠流程會在報名合約中明列。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q20：菲律賓1-2 月天氣適合活動嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：非常適合！一月是菲律賓最舒服的「乾季」，天氣涼爽 約28°C，不太會下大雨，非常適合戶外和海邊活動。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q21：是否提供照片與影片？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：每日更新雲端相簿，提供紀錄相片或影片連結。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q22：孩子第一次出國，會害怕嗎？(學生單獨前往) <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：全程有中籍台灣隨團老師與學校生活老師照顧，每日安排聯絡時間，透過LINE群每日更新孩子照片與狀況，讓家長即時掌握。</div>
-                </li>
-
-                <li class="faq-category">三、交通與行前準備</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q23：從台灣怎麼到宿霧？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：從桃園直飛宿霧約2小時50分，全程由領隊帶隊，機場到學校專車接送。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q24：需要準備哪些物品？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：行李建議：護照、學習用品、防曬用品、個人藥品、泳衣、防蚊液與轉接頭等。出發前會提供詳細「行前手冊」。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q25：出發前會有說明會嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：會。皇家總部將於出發前舉辦行前說明會，詳細說明行程、行李、海關流程、保險內容及緊急聯絡方式。</div>
-                </li>
-                
-                <li class="faq-category">四、親子同行與安全</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q26：學生年齡有限制嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：我們的遊學團對孩子的年齡沒有硬性限制，主要是看孩子的獨立程度。若考量到低年級孩子（例如小學三年級以下）的適應狀況和生活協助需求，我們會建議由家長陪同參加，讓孩子在最安心的環境下學習與成長。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q27：家長一起去的安排是甚麼？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：「親子課程」，孩子上課時家長白天可自由活動或選擇家長英文課程。晚上與孩子共同住宿、共進午晚餐。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q28：孩子有特殊飲食或健康狀況可以告知嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：可以，報名時請註明，我們會提前與學校、廚房及住宿單位溝通安排。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q29：如何確保孩子的安全？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：每日固定點名、夜間門禁、交通全程專車接送。不論是上課還是校外活動，全程都由台灣領隊老師搭配當地老師共同陪同、分工照看，全程禁止孩子單獨行動。</div>
-                </li>
-
-                <li class="faq-category">五、效果與回饋</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q30：短期學習真的有幫助嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：宿霧遊學最大的優勢是「全英語環境＋密集課程」，能快速提升口說自信與聽力反應，讓孩子真正體會到英文的重要性，並練習「敢開口說」。此外，我們特別安排了皇家精英美語專屬課程，將孩子在台灣所學的內容無縫融入，幫助他們快速適應、增加自信，讓學習效果事半功倍！</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q31：結束後會有證書或成果嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：課程結束後學校會頒發結業證書並舉辦結業式，讓家長清楚了解孩子的進步。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q32：課程成效如何評估？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：到校會進行分級測驗，回國前有舉辦學習成果展示。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q33：學習成效？真的有效嗎？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：菲律賓的教學核心是一對一的客製化課程，老師會根據孩子的程度和需求量身打造內容，配合每天四堂一對一和四堂團體課的沈浸式密集學習，能讓孩子的口說自信與聽力反應快速爆發性提升。此外，我們也會將部分上課內容和主題建入 iRoyal 系統中，讓孩子回國後可以不斷複習，皇家菁英美語的老師們也會持續協助銜接。</div>
-                </li>
-                
-                <li class="faq-category">六、報名與聯絡方式 📞</li>
-                <li class="faq-item">
-                    <div class="faq-question">Q34：為何現在就該報名？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：本梯次名額僅親子30 組且含皇家加值課，額滿截止，請把握機會。</div>
-                </li>
-                <li class="faq-item">
-                    <div class="faq-question">Q35：如何繳費？ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">A：11/28前繳交訂金30% (NT$25,500)，其餘尾款 NT$59,500 請於12/26前繳交，即完成報名手續。
-                        <br>匯款戶名: 富陽文化事業股份有限公司
-                        <br>銀行代號: 永豐銀行(807)
-                        <br>匯款帳號: 029-018-0011568-1
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <h3 class="h4 text-danger mb-3">超高 CP 值</h3>
+                        <p>只要歐美國家的 1/3 費用，包吃包住還有專人打掃，讓你專注學習無後顧之憂。</p>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="register" class="section register-section">
-        <div class="container">
-            <h2 class="section-title">2026 寒假梯次：限量名額倒數中！</h2>
-            
-            <div class="countdown-box">
-                <p>報名截止日：2025年 11月 26日</p>
-                <div class="countdown" id="countdown-timer">
-                    <span class="countdown-label">距離截止</span>
                 </div>
             </div>
-
-            <div class="register-info-grid">
-                <div class="info-card">
-                    <h3>💎 費用總覽與優惠</h3>
-                    <p class="price">NT$85,000 / 人</p>
-                    <p class="includes">費用已含：簽證、機票、課程、住宿、餐食、交通、活動 T恤。</p>
-                    <hr style="margin: 15px 0; border-top: 1px dashed #ddd;">
-                    <ul class="offer-list">
-                        <li><i class="fas fa-check-circle"></i> 親子同行優惠：現折NT$8,000</li>
-                        <li><i class="fas fa-check-circle"></i> 或選擇：贈送學習機乙台</li>
-                    </ul>
-                    <p class="small-text">名額有限（限額親子 30 組），請盡早報名！</p>
-                </div>
-                <div class="info-card offer-card">
-                    <h3>📞 報名與聯絡資訊</h3>
-                    <p class="contact-detail"><i class="fas fa-calendar-alt"></i> 活動日期：2026/01/26（一）～02/08（日）</p>
-                    <p class="contact-detail"><i class="fas fa-times-circle"></i> 報名截止：2025/11/26</p>
-                    <p class="contact-detail"><i class="fas fa-user-friends"></i> 名額：限額 親子30 組</p>
-                    <p class="contact-detail"><i class="fas fa-phone-alt"></i> 洽詢專線：03-3268270</p>
-                    <p class="contact-detail"><i class="fab fa-line"></i> LINE 官方：@333vmqio</p>
-                    <p class="contact-detail" style="margin-top: 20px;"><i class="fas fa-dollar-sign"></i> 訂金繳費：11/28 前繳交 NT$25,500 (30%)</p>
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <h3 class="h4 text-danger mb-3">一對一教學</h3>
+                        <p>每天 4~8 堂一對一課程，老師針對你的弱點加強，開口說英文不再是難事。</p>
+                    </div>
                 </div>
             </div>
-            
-            <a href="報名表單連結" target="_blank" class="btn btn-primary btn-cta">立即鎖定名額，進入報名表單</a>
-
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <h3 class="h4 text-danger mb-3">度假式學習</h3>
+                        <p>週末即可跳島浮潛、與鯨鯊共游。在藍天白雲下學習，心情好，吸收更快！</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <footer class="footer">
+
+    <!-- Why Us Section -->
+    <section class="py-5" style="background-color: var(--soft-bg);">
         <div class="container">
-            <p>&copy; 2025 皇家菁英美語 | 活動日期：2026/01/26 ~ 02/08</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title">富學四大核心優勢</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">價格透明</h3>
+                        <p class="text-muted">保證與學校報價同步，無隱藏代辦費。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">嚴選師資</h3>
+                        <p class="text-muted">顧問實地探訪 20 大熱門校區，拒絕踩雷。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">在地支援</h3>
+                        <p class="text-muted">宿霧駐點團隊，生病、意外第一時間處理。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">職涯評估</h3>
+                        <p class="text-muted">結合學習目標，推薦最適合的證照課程。</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Hot Schools Section -->
+    <!-- Hot Schools Section (Premium) -->
+    <section class="hot-schools-section position-relative">
+        <div class="container-fluid px-0">
+            <div class="text-center mb-5">
+                <h2 class="hot-schools-title">熱門學校精選</h2>
+                <p class="hot-schools-subtitle">精選 TOP 6 熱門名校，手慢無！</p>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="scroll-btn scroll-prev" id="btn-prev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="scroll-btn scroll-next" id="btn-next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
+            <!-- Scroll Container -->
+            <div class="school-scroll-container">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section py-5 position-relative">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">學員真實好評</h2>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Item 1 -->
+                    <div class="carousel-item active">
+                        <div class="card border-0 rounded-4 overflow-hidden mx-auto" style="max-width: 900px;">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1525134479668-1bee49739d2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                        class="img-fluid h-100 object-fit-cover" alt="Student A">
+                                </div>
+                                <div class="col-md-7 d-flex align-items-center bg-white">
+                                    <div class="card-body p-5">
+                                        <div class="mb-3 text-warning">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h4 class="card-title fw-bold mb-3">多益成績進步 300 分！</h4>
+                                        <p class="card-text text-muted mb-4">
+                                            "原本很擔心英文不好無法溝通，但宿務的老師真的非常有耐心。三個月的密集課程，讓我不只拿到金色證書，更交到了來自世界各地的好朋友！"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h5 class="mb-0 fw-bold">Emily Chen</h5>
+                                                <small class="text-muted">就讀學校：SMEAG | 課程：ESL 一般英文</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="carousel-item">
+                        <div class="card border-0 rounded-4 overflow-hidden mx-auto" style="max-width: 900px;">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                        class="img-fluid h-100 object-fit-cover" alt="Student B">
+                                </div>
+                                <div class="col-md-7 d-flex align-items-center bg-white">
+                                    <div class="card-body p-5">
+                                        <div class="mb-3 text-warning">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h4 class="card-title fw-bold mb-3">邊玩邊學的最佳選擇</h4>
+                                        <p class="card-text text-muted mb-4">
+                                            "選擇富學代辦真的太對了！不只幫我處理好所有簽證機票，到了當地還有駐點人員關心。週末跳島行程超級好玩，遊學就該這樣享受！"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h5 class="mb-0 fw-bold">Jason Lin</h5>
+                                                <small class="text-muted">就讀學校：CIA | 課程：Business English</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <p>&copy; 2025 GO! Philippines 遊學代辦. All Rights Reserved.</p>
     </footer>
 
-
-    <div id="modal-1" class="custom-modal">
-        <div class="modal-content">
-            <div class="modal-gallery">
-                <div class="gallery-track">
-                    <img src="1對1課程.png" alt="一對一課程內容說明" class="gallery-img">
-                    <img src="一對一上課照.png" alt="一對一上課情境" class="gallery-img active">
-                                      
-                </div>
-                
-                <button class="gallery-prev-btn" onclick="galleryMoveSlide(1, -1)">&#10094;</button>
-                <button class="gallery-next-btn" onclick="galleryMoveSlide(1, 1)">&#10095;</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="modal-2" class="custom-modal">
-        <div class="modal-content">
-            <div class="modal-gallery">
-                <div class="gallery-track">
-                    <img src="皇家課程.png" alt="皇家特色課程" class="gallery-img active">
-            
-                </div>
-                
-                <button class="gallery-prev-btn" onclick="galleryMoveSlide(2, -1)">&#10094;</button>
-                <button class="gallery-next-btn" onclick="galleryMoveSlide(2, 1)">&#10095;</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-3" class="custom-modal">
-        <div class="modal-content">
-            <div class="modal-gallery">
-                <div class="gallery-track">
-                    <img src="跳島.png" alt="國際志工" class="gallery-img active">
-                    <img src="國際志工.png" alt="國際志工" class="gallery-img active">
-                </div>
-                
-                <button class="gallery-prev-btn" onclick="galleryMoveSlide(3, -1)">&#10094;</button>
-                <button class="gallery-next-btn" onclick="galleryMoveSlide(3, 1)">&#10095;</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-4" class="custom-modal">
-        <div class="modal-content">
-            <div class="modal-gallery">
-                <div class="gallery-track">
-                    <img src="專業師資.png" alt="專業師資" class="gallery-img active">
-                    
-                </div>
-                
-                <button class="gallery-prev-btn" onclick="galleryMoveSlide(4, -1)">&#10094;</button>
-                <button class="gallery-next-btn" onclick="galleryMoveSlide(4, 1)">&#10095;</button>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="script.js"></script> 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="school-data.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
